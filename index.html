@@ -95,8 +95,44 @@
     transition: transform 0.2s ease;
   }
   .nav-cta:hover { transform: translateY(-1px); }
+
+  /* Language Switch */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 12px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: 4px;
+  }
+  .lang-switch:hover {
+    border-color: var(--accent);
+  }
+  .lang-opt {
+    color: var(--ink-dim);
+    transition: color 0.2s ease;
+    padding: 0 2px;
+  }
+  .lang-opt.active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .lang-divider {
+    color: var(--border);
+    font-weight: 300;
+  }
+
   @media (max-width: 720px) {
     .nav-links a:not(.nav-cta) { display: none; }
+    .lang-switch { display: inline-flex; }
   }
 
   /* ========== HERO ========== */
@@ -723,11 +759,16 @@
   <div class="container">
     <div class="logo"><span class="logo-dot"></span>Carla Boga</div>
     <div class="nav-links">
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#skills">Skills</a>
-      <a href="#contacto" class="nav-cta">Contacto</a>
+      <a href="#sobre-mi" data-es="Sobre mí" data-en="About">Sobre mí</a>
+      <a href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a>
+      <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="#skills" data-es="Skills" data-en="Skills">Skills</a>
+      <a href="#contacto" class="nav-cta" data-es="Contacto" data-en="Contact">Contacto</a>
+      <button class="lang-switch" id="langSwitch" aria-label="Change language">
+        <span class="lang-opt active" data-lang="es">ES</span>
+        <span class="lang-divider">/</span>
+        <span class="lang-opt" data-lang="en">EN</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -737,23 +778,23 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
-        <div class="hero-meta">Portfolio profesional</div>
+        <div class="hero-meta" data-es="Portfolio profesional" data-en="Professional Portfolio">Portfolio profesional</div>
         <h1>
           Carla Tamara <span class="name-accent">Boga</span>
         </h1>
         <p class="hero-role">
-          Analista Funcional <strong>SAP S/4HANA</strong>
+          <span data-es="Analista Funcional" data-en="Functional Analyst">Analista Funcional</span> <strong>SAP S/4HANA</strong>
           <span class="hero-role-tag">MM · WM · IM</span>
         </p>
         <p class="hero-sub">
-          Más de 3 años transformando procesos de logística, compras y abastecimiento con SAP MM · WM · IM. Articulo lo que el negocio necesita con lo que la tecnología puede entregar.
+          <span data-es="Más de 3 años transformando procesos de logística, compras y abastecimiento con SAP MM · WM · IM. Articulo lo que el negocio necesita con lo que la tecnología puede entregar." data-en="Over 3 years transforming logistics, procurement and supply chain processes with SAP MM · WM · IM. I bridge what the business needs with what technology can deliver.">Más de 3 años transformando procesos de logística, compras y abastecimiento con SAP MM · WM · IM. Articulo lo que el negocio necesita con lo que la tecnología puede entregar.</span>
         </p>
         <div class="hero-ctas">
           <a href="#contacto" class="btn btn-primary">
-            Hablemos
+            <span data-es="Hablemos" data-en="Let's talk">Hablemos</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
           </a>
-          <a href="#experiencia" class="btn btn-secondary">Ver experiencia</a>
+          <a href="#experiencia" class="btn btn-secondary" data-es="Ver experiencia" data-en="View experience">Ver experiencia</a>
         </div>
       </div>
 
@@ -794,30 +835,30 @@
   <div class="container">
     <div class="about-grid">
       <div class="reveal">
-        <div class="section-label">01 — Sobre mí</div>
-        <h2 class="section-title">Traduzco procesos de negocio en <em>soluciones SAP</em> que funcionan.</h2>
+        <div class="section-label" data-es="01 — Sobre mí" data-en="01 — About">01 — Sobre mí</div>
+        <h2 class="section-title"><span data-es="Traduzco procesos de negocio en " data-en="I translate business processes into ">Traduzco procesos de negocio en </span><em data-es="soluciones SAP" data-en="SAP solutions">soluciones SAP</em><span data-es=" que funcionan." data-en=" that actually work."> que funcionan.</span></h2>
         <div class="about-text">
-          <p>Soy <em>Analista Funcional SAP S/4HANA</em>, especializada en procesos de compras, inventarios y operaciones logísticas.</p>
-          <p>Mi experiencia previa liderando equipos de operaciones me dio una mirada que va más allá del sistema: entiendo cómo se sienten los procesos del lado del usuario, qué necesita el negocio para funcionar, y cómo traducir eso en soluciones SAP concretas y sostenibles.</p>
-          <p>Hoy trabajo articulando áreas de negocio y equipos técnicos en proyectos de implementación, estabilización y mejora continua de circuitos Procure-to-Pay, con foco en trazabilidad, eficiencia y estandarización.</p>
+          <p data-es="Soy *Analista Funcional SAP S/4HANA*, especializada en procesos de compras, inventarios y operaciones logísticas." data-en="I'm a *SAP S/4HANA Functional Analyst*, specialized in procurement, inventory management and logistics operations.">Soy <em>Analista Funcional SAP S/4HANA</em>, especializada en procesos de compras, inventarios y operaciones logísticas.</p>
+          <p data-es="Mi experiencia previa liderando equipos de operaciones me dio una mirada que va más allá del sistema: entiendo cómo se sienten los procesos del lado del usuario, qué necesita el negocio para funcionar, y cómo traducir eso en soluciones SAP concretas y sostenibles." data-en="My previous experience leading operations teams gave me a perspective that goes beyond the system itself: I understand how processes feel from the user side, what the business needs to function, and how to translate that into concrete and sustainable SAP solutions.">Mi experiencia previa liderando equipos de operaciones me dio una mirada que va más allá del sistema: entiendo cómo se sienten los procesos del lado del usuario, qué necesita el negocio para funcionar, y cómo traducir eso en soluciones SAP concretas y sostenibles.</p>
+          <p data-es="Hoy trabajo articulando áreas de negocio y equipos técnicos en proyectos de implementación, estabilización y mejora continua de circuitos Procure-to-Pay, con foco en trazabilidad, eficiencia y estandarización." data-en="Today I bridge business stakeholders and technical teams across implementation, stabilization and continuous improvement projects of Procure-to-Pay processes, focusing on traceability, efficiency and standardization.">Hoy trabajo articulando áreas de negocio y equipos técnicos en proyectos de implementación, estabilización y mejora continua de circuitos Procure-to-Pay, con foco en trazabilidad, eficiencia y estandarización.</p>
         </div>
       </div>
       <div class="stats reveal">
         <div class="stat">
           <div class="stat-num">3<span class="plus">+</span></div>
-          <div class="stat-label">Años en entornos SAP S/4HANA</div>
+          <div class="stat-label" data-es="Años en entornos SAP S/4HANA" data-en="Years in SAP S/4HANA environments">Años en entornos SAP S/4HANA</div>
         </div>
         <div class="stat">
           <div class="stat-num">5<span class="plus">+</span></div>
-          <div class="stat-label">Años en análisis de procesos y gestión IT</div>
+          <div class="stat-label" data-es="Años en análisis de procesos y gestión IT" data-en="Years in process analysis and IT management">Años en análisis de procesos y gestión IT</div>
         </div>
         <div class="stat">
           <div class="stat-num">3</div>
-          <div class="stat-label">Módulos core: MM · WM · IM</div>
+          <div class="stat-label" data-es="Módulos core: MM · WM · IM" data-en="Core modules: MM · WM · IM">Módulos core: MM · WM · IM</div>
         </div>
         <div class="stat">
           <div class="stat-num">12<span class="plus">+</span></div>
-          <div class="stat-label">Certificaciones en SAP, Agilidad y Product</div>
+          <div class="stat-label" data-es="Certificaciones en SAP, Agilidad y Product" data-en="Certifications in SAP, Agile and Product">Certificaciones en SAP, Agilidad y Product</div>
         </div>
       </div>
     </div>
@@ -828,17 +869,17 @@
 <section id="experiencia">
   <div class="container">
     <div class="reveal">
-      <div class="section-label">02 — Experiencia</div>
-      <h2 class="section-title">Una trayectoria que va de la <em>operación</em> a la consultoría funcional.</h2>
+      <div class="section-label" data-es="02 — Experiencia" data-en="02 — Experience">02 — Experiencia</div>
+      <h2 class="section-title"><span data-es="Una trayectoria que va de la " data-en="A career path going from ">Una trayectoria que va de la </span><em data-es="operación" data-en="operations">operación</em><span data-es=" a la consultoría funcional." data-en=" to functional consulting."> a la consultoría funcional.</span></h2>
     </div>
 
     <div class="timeline">
       <div class="job reveal">
         <div class="job-date">NOV 2023 — FEB 2026</div>
         <div>
-          <h3 class="job-role">Analista Funcional SAP S/4HANA — MM · WM · IM</h3>
+          <h3 class="job-role" data-es="Analista Funcional SAP S/4HANA — MM · WM · IM" data-en="SAP S/4HANA Functional Analyst — MM · WM · IM">Analista Funcional SAP S/4HANA — MM · WM · IM</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc">Implementación SAP S/4HANA bajo metodología SAP Activate (Explore, Realize, Deploy). Relevamiento As-Is, diseño To-Be, configuración funcional, integración MM/WM/FI, pruebas UAT end-to-end y soporte post go-live. Participación en la digitalización del circuito Procure-to-Pay.</p>
+          <p class="job-desc" data-es="Implementación SAP S/4HANA bajo metodología SAP Activate (Explore, Realize, Deploy). Relevamiento As-Is, diseño To-Be, configuración funcional, integración MM/WM/FI, pruebas UAT end-to-end y soporte post go-live. Participación en la digitalización del circuito Procure-to-Pay." data-en="SAP S/4HANA implementation under SAP Activate methodology (Explore, Realize, Deploy). As-Is analysis, To-Be design, functional configuration, MM/WM/FI integration, end-to-end UAT testing and post go-live support. Active role in the digitization of the Procure-to-Pay process.">Implementación SAP S/4HANA bajo metodología SAP Activate (Explore, Realize, Deploy). Relevamiento As-Is, diseño To-Be, configuración funcional, integración MM/WM/FI, pruebas UAT end-to-end y soporte post go-live. Participación en la digitalización del circuito Procure-to-Pay.</p>
           <div class="job-tags">
             <span class="tag">SAP S/4HANA</span>
             <span class="tag">SAP Activate</span>
@@ -854,9 +895,9 @@
       <div class="job reveal">
         <div class="job-date">DIC 2022 — NOV 2023</div>
         <div>
-          <h3 class="job-role">IT Project Manager — Gestión de la Demanda TI</h3>
+          <h3 class="job-role" data-es="IT Project Manager — Gestión de la Demanda TI" data-en="IT Project Manager — IT Demand Management">IT Project Manager — Gestión de la Demanda TI</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc">Relevamiento y estructuración de requerimientos tecnológicos transversales al negocio. Gestión y priorización del backlog, coordinación con stakeholders, equipos técnicos y proveedores IT hasta la puesta en producción.</p>
+          <p class="job-desc" data-es="Relevamiento y estructuración de requerimientos tecnológicos transversales al negocio. Gestión y priorización del backlog, coordinación con stakeholders, equipos técnicos y proveedores IT hasta la puesta en producción." data-en="Gathering and structuring cross-business technology requirements. Backlog management and prioritization, coordination with stakeholders, technical teams and IT vendors through production rollout.">Relevamiento y estructuración de requerimientos tecnológicos transversales al negocio. Gestión y priorización del backlog, coordinación con stakeholders, equipos técnicos y proveedores IT hasta la puesta en producción.</p>
           <div class="job-tags">
             <span class="tag">Project Management</span>
             <span class="tag">Stakeholder Management</span>
@@ -869,9 +910,9 @@
       <div class="job reveal">
         <div class="job-date">FEB 2021 — DIC 2022</div>
         <div>
-          <h3 class="job-role">Jefa de Control de Operaciones</h3>
+          <h3 class="job-role" data-es="Jefa de Control de Operaciones" data-en="Operations Control Manager">Jefa de Control de Operaciones</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc">Liderazgo del equipo administrativo responsable de circuitos de compras, pagos y facturación. Reorganización de procesos internos para fortalecer controles y reducir desvíos. Diseño de tableros de indicadores.</p>
+          <p class="job-desc" data-es="Liderazgo del equipo administrativo responsable de circuitos de compras, pagos y facturación. Reorganización de procesos internos para fortalecer controles y reducir desvíos. Diseño de tableros de indicadores." data-en="Led the administrative team responsible for procurement, payments and billing processes. Reorganized internal processes to strengthen controls and reduce deviations. Designed KPI dashboards for operations management.">Liderazgo del equipo administrativo responsable de circuitos de compras, pagos y facturación. Reorganización de procesos internos para fortalecer controles y reducir desvíos. Diseño de tableros de indicadores.</p>
           <div class="job-tags">
             <span class="tag">Liderazgo</span>
             <span class="tag">Procure-to-Pay</span>
@@ -884,9 +925,9 @@
       <div class="job reveal">
         <div class="job-date">JUL 2019 — ENE 2021</div>
         <div>
-          <h3 class="job-role">Jefa de Operaciones — PMO</h3>
+          <h3 class="job-role" data-es="Jefa de Operaciones — PMO" data-en="Operations Manager — PMO">Jefa de Operaciones — PMO</h3>
           <div class="job-company">Recupero Crediticio</div>
-          <p class="job-desc">Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recuperación e indicadores de performance.</p>
+          <p class="job-desc" data-es="Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recuperación e indicadores de performance." data-en="Coordinated operations teams dedicated to collections and recovery campaigns. Built commercial and financial reports. Defined recovery strategies and performance indicators.">Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recuperación e indicadores de performance.</p>
           <div class="job-tags">
             <span class="tag">PMO</span>
             <span class="tag">Reporting</span>
@@ -902,16 +943,16 @@
 <section id="proyectos" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
     <div class="reveal">
-      <div class="section-label">03 — Proyectos destacados</div>
-      <h2 class="section-title">Implementaciones donde <em>dejé huella</em>.</h2>
-      <p class="section-intro">Una selección de los proyectos más representativos de mi trabajo con SAP, simplificación de back office y digitalización de procesos administrativos.</p>
+      <div class="section-label" data-es="03 — Proyectos destacados" data-en="03 — Featured projects">03 — Proyectos destacados</div>
+      <h2 class="section-title"><span data-es="Implementaciones donde " data-en="Implementations where ">Implementaciones donde </span><em data-es="dejé huella" data-en="I made an impact">dejé huella</em><span data-es="." data-en=".">.</span></h2>
+      <p class="section-intro" data-es="Una selección de los proyectos más representativos de mi trabajo con SAP, simplificación de back office y digitalización de procesos administrativos." data-en="A selection of the most representative projects of my work with SAP, back office simplification and digitization of administrative processes.">Una selección de los proyectos más representativos de mi trabajo con SAP, simplificación de back office y digitalización de procesos administrativos.</p>
     </div>
 
     <div class="projects-grid">
       <div class="project reveal">
         <div class="project-year">2023 — 2025</div>
-        <h3 class="project-title">Implementación SAP S/4HANA</h3>
-        <p class="project-desc">Implementación end-to-end bajo SAP Activate. Participación en relevamiento funcional, configuración de MM/WM/IM, diseño To-Be, pruebas UAT y soporte durante go-live y estabilización.</p>
+        <h3 class="project-title" data-es="Implementación SAP S/4HANA" data-en="SAP S/4HANA Implementation">Implementación SAP S/4HANA</h3>
+        <p class="project-desc" data-es="Implementación end-to-end bajo SAP Activate. Participación en relevamiento funcional, configuración de MM/WM/IM, diseño To-Be, pruebas UAT y soporte durante go-live y estabilización." data-en="End-to-end implementation under SAP Activate. Active participation in functional analysis, MM/WM/IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación end-to-end bajo SAP Activate. Participación en relevamiento funcional, configuración de MM/WM/IM, diseño To-Be, pruebas UAT y soporte durante go-live y estabilización.</p>
         <div class="project-stack">
           <span class="tag">S/4HANA</span>
           <span class="tag">SAP Activate</span>
@@ -921,8 +962,8 @@
 
       <div class="project reveal">
         <div class="project-year">2025 — 2026</div>
-        <h3 class="project-title">PSB — Plan de Simplificación del Back Office</h3>
-        <p class="project-desc">Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo inter-áreas para rediseño de Cash Flow, presupuesto y Procure-to-Pay. Análisis de FTE por puesto.</p>
+        <h3 class="project-title" data-es="PSB — Plan de Simplificación del Back Office" data-en="PSB — Back Office Simplification Plan">PSB — Plan de Simplificación del Back Office</h3>
+        <p class="project-desc" data-es="Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo inter-áreas para rediseño de Cash Flow, presupuesto y Procure-to-Pay. Análisis de FTE por puesto." data-en="As-Is analysis and To-Be design of administrative and financial processes. Coordinated cross-functional working sessions to redesign Cash Flow, budgeting and Procure-to-Pay. FTE analysis per role.">Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo inter-áreas para rediseño de Cash Flow, presupuesto y Procure-to-Pay. Análisis de FTE por puesto.</p>
         <div class="project-stack">
           <span class="tag">Process Design</span>
           <span class="tag">As-Is / To-Be</span>
@@ -932,8 +973,8 @@
 
       <div class="project reveal">
         <div class="project-year">2021 — 2023</div>
-        <h3 class="project-title">Legajo Digital & Portal de Proveedores</h3>
-        <p class="project-desc">Digitalización del circuito de pago a proveedores desde orden de compra hasta orden de pago. Implementación de plataforma con workflow de aprobaciones y portal de autogestión.</p>
+        <h3 class="project-title" data-es="Legajo Digital & Portal de Proveedores" data-en="Digital Records & Supplier Portal">Legajo Digital & Portal de Proveedores</h3>
+        <p class="project-desc" data-es="Digitalización del circuito de pago a proveedores desde orden de compra hasta orden de pago. Implementación de plataforma con workflow de aprobaciones y portal de autogestión." data-en="Digitization of the supplier payment process from purchase order to payment order. Platform implementation with approval workflow and self-service supplier portal.">Digitalización del circuito de pago a proveedores desde orden de compra hasta orden de pago. Implementación de plataforma con workflow de aprobaciones y portal de autogestión.</p>
         <div class="project-stack">
           <span class="tag">Workflow</span>
           <span class="tag">Digitalización</span>
@@ -948,13 +989,13 @@
 <section id="skills" class="skills">
   <div class="container">
     <div class="reveal">
-      <div class="section-label">04 — Stack & competencias</div>
-      <h2 class="section-title">Las herramientas que <em>domino</em> día a día.</h2>
+      <div class="section-label" data-es="04 — Stack & competencias" data-en="04 — Stack & expertise">04 — Stack & competencias</div>
+      <h2 class="section-title"><span data-es="Las herramientas que " data-en="The tools I ">Las herramientas que </span><em data-es="domino" data-en="master">domino</em><span data-es=" día a día." data-en=" every day."> día a día.</span></h2>
     </div>
 
     <div class="skills-grid reveal">
       <div class="skill-cat">
-        <div class="skill-cat-title">ERP & SAP</div>
+        <div class="skill-cat-title" data-es="ERP & SAP" data-en="ERP & SAP">ERP & SAP</div>
         <div class="skill-list">
           <span>SAP S/4HANA</span>
           <span>MM</span>
@@ -968,7 +1009,7 @@
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">Gestión de proyectos</div>
+        <div class="skill-cat-title" data-es="Gestión de proyectos" data-en="Project Management">Gestión de proyectos</div>
         <div class="skill-list">
           <span>Jira</span>
           <span>Redmine</span>
@@ -981,7 +1022,7 @@
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">Colaboración</div>
+        <div class="skill-cat-title" data-es="Colaboración" data-en="Collaboration">Colaboración</div>
         <div class="skill-list">
           <span>Microsoft Teams</span>
           <span>Miro</span>
@@ -991,36 +1032,36 @@
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">Tecnologías</div>
+        <div class="skill-cat-title" data-es="Tecnologías" data-en="Technologies">Tecnologías</div>
         <div class="skill-list">
-          <span>Debugging ABAP</span>
+          <span data-es="Debugging ABAP" data-en="ABAP Debugging">Debugging ABAP</span>
           <span>SE38</span>
           <span>SAP Query</span>
           <span>Infosets</span>
           <span>SQL</span>
           <span>n8n</span>
-          <span>Excel Avanzado</span>
+          <span data-es="Excel Avanzado" data-en="Advanced Excel">Excel Avanzado</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">Competencias clave</div>
+        <div class="skill-cat-title" data-es="Competencias clave" data-en="Key competencies">Competencias clave</div>
         <div class="skill-list">
-          <span>Análisis de procesos</span>
-          <span>Relevamiento funcional</span>
-          <span>Documentación funcional</span>
+          <span data-es="Análisis de procesos" data-en="Process analysis">Análisis de procesos</span>
+          <span data-es="Relevamiento funcional" data-en="Functional analysis">Relevamiento funcional</span>
+          <span data-es="Documentación funcional" data-en="Functional documentation">Documentación funcional</span>
           <span>UAT end-to-end</span>
-          <span>Integración MM/WM/FI</span>
-          <span>Soporte post go-live</span>
+          <span data-es="Integración MM/WM/FI" data-en="MM/WM/FI integration">Integración MM/WM/FI</span>
+          <span data-es="Soporte post go-live" data-en="Post go-live support">Soporte post go-live</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">Idiomas</div>
+        <div class="skill-cat-title" data-es="Idiomas" data-en="Languages">Idiomas</div>
         <div class="skill-list">
-          <span>Español — Nativo</span>
-          <span>Inglés — Intermedio</span>
-          <span>Portugués — Básico</span>
+          <span data-es="Español — Nativo" data-en="Spanish — Native">Español — Nativo</span>
+          <span data-es="Inglés — Intermedio" data-en="English — Intermediate">Inglés — Intermedio</span>
+          <span data-es="Portugués — Básico" data-en="Portuguese — Basic">Portugués — Básico</span>
         </div>
       </div>
     </div>
@@ -1031,30 +1072,30 @@
 <section id="certificaciones">
   <div class="container">
     <div class="reveal">
-      <div class="section-label">05 — Formación</div>
-      <h2 class="section-title">Certificaciones & <em>educación</em>.</h2>
-      <p class="section-intro">Formación continua en SAP, metodologías ágiles, product management y — más recientemente — automatización con inteligencia artificial.</p>
+      <div class="section-label" data-es="05 — Formación" data-en="05 — Education">05 — Formación</div>
+      <h2 class="section-title"><span data-es="Certificaciones & " data-en="Certifications & ">Certificaciones & </span><em data-es="educación" data-en="education">educación</em>.</h2>
+      <p class="section-intro" data-es="Formación continua en SAP, metodologías ágiles, product management y — más recientemente — automatización con inteligencia artificial." data-en="Continuous training in SAP, agile methodologies, product management and — more recently — automation with artificial intelligence.">Formación continua en SAP, metodologías ágiles, product management y — más recientemente — automatización con inteligencia artificial.</p>
     </div>
 
     <div class="certs-grid reveal">
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4l7 4z"/></svg></div>
         <div>
-          <div class="cert-name">SAP MM S/4HANA — Compras e Inventarios</div>
+          <div class="cert-name" data-es="SAP MM S/4HANA — Compras e Inventarios" data-en="SAP MM S/4HANA — Procurement & Inventory">SAP MM S/4HANA — Compras e Inventarios</div>
           <div class="cert-meta">2025</div>
         </div>
       </div>
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4l7 4z"/></svg></div>
         <div>
-          <div class="cert-name">SAP FI — Desde Cero y Completo</div>
+          <div class="cert-name" data-es="SAP FI — Desde Cero y Completo" data-en="SAP FI — Complete from Scratch">SAP FI — Desde Cero y Completo</div>
           <div class="cert-meta">2025</div>
         </div>
       </div>
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
         <div>
-          <div class="cert-name">Automatización y Agentes IA con n8n</div>
+          <div class="cert-name" data-es="Automatización y Agentes IA con n8n" data-en="Automation & AI Agents with n8n">Automatización y Agentes IA con n8n</div>
           <div class="cert-meta">Educación IT · 2026</div>
         </div>
       </div>
@@ -1089,7 +1130,7 @@
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
         <div>
-          <div class="cert-name">Metodologías Ágiles</div>
+          <div class="cert-name" data-es="Metodologías Ágiles" data-en="Agile Methodologies">Metodologías Ágiles</div>
           <div class="cert-meta">CoderHouse · 2022</div>
         </div>
       </div>
@@ -1103,7 +1144,7 @@
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
         <div>
-          <div class="cert-name">Gestión Ágil de Proyectos</div>
+          <div class="cert-name" data-es="Gestión Ágil de Proyectos" data-en="Agile Project Management">Gestión Ágil de Proyectos</div>
           <div class="cert-meta">Crehana · 2022</div>
         </div>
       </div>
@@ -1111,14 +1152,14 @@
 
     <div class="edu-row reveal">
       <div class="edu-item">
-        <h4>Licenciatura en Administración de Empresas</h4>
-        <p>Universidad Nacional de Tucumán</p>
-        <div class="edu-date">GRADUADA · 2017</div>
+        <h4 data-es="Licenciatura en Administración de Empresas" data-en="Bachelor in Business Administration">Licenciatura en Administración de Empresas</h4>
+        <p data-es="Universidad Nacional de Tucumán" data-en="National University of Tucumán">Universidad Nacional de Tucumán</p>
+        <div class="edu-date" data-es="GRADUADA · 2017" data-en="GRADUATED · 2017">GRADUADA · 2017</div>
       </div>
       <div class="edu-item">
-        <h4>Esp. en Marketing y Dirección Comercial</h4>
-        <p>Universidad Empresarial Siglo 21</p>
-        <div class="edu-date">EN CURSO</div>
+        <h4 data-es="Esp. en Marketing y Dirección Comercial" data-en="Specialization in Marketing & Commercial Management">Esp. en Marketing y Dirección Comercial</h4>
+        <p data-es="Universidad Empresarial Siglo 21" data-en="Siglo 21 Business University">Universidad Empresarial Siglo 21</p>
+        <div class="edu-date" data-es="EN CURSO" data-en="IN PROGRESS">EN CURSO</div>
       </div>
     </div>
   </div>
@@ -1127,13 +1168,13 @@
 <!-- ========== CONTACTO ========== -->
 <section id="contacto" class="contact">
   <div class="container">
-    <h2>¿Tenés un proyecto<br><em>SAP en mente?</em></h2>
-    <p>Estoy abierta a oportunidades Semi-Sr o Sr en implementación, soporte funcional y mejora de procesos. También a colaboraciones freelance y consultoría.</p>
+    <h2><span data-es="¿Tenés un proyecto" data-en="Got a SAP project">¿Tenés un proyecto</span><br><em data-es="SAP en mente?" data-en="in mind?">SAP en mente?</em></h2>
+    <p data-es="Estoy abierta a oportunidades Semi-Sr o Sr en implementación, soporte funcional y mejora de procesos. También a colaboraciones freelance y consultoría." data-en="I'm open to Semi-Sr or Sr opportunities in implementation, functional support and process improvement. Also available for freelance collaborations and consulting.">Estoy abierta a oportunidades Semi-Sr o Sr en implementación, soporte funcional y mejora de procesos. También a colaboraciones freelance y consultoría.</p>
 
     <div class="contact-buttons">
       <a href="mailto:carla.bogamassa@gmail.com" class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6l9-6M3 8v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8M3 8l2-2h14l2 2"/></svg>
-        Enviarme un email
+        <span data-es="Enviarme un email" data-en="Send me an email">Enviarme un email</span>
       </a>
       <a href="https://www.linkedin.com/in/Carla-boga-08" target="_blank" class="btn btn-secondary">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 1 1 8.3 6.5a1.78 1.78 0 0 1-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0 0 13 14.19a.66.66 0 0 0 0 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 0 1 2.7-1.4c1.55 0 3.36.86 3.36 3.66z"/></svg>
@@ -1151,8 +1192,8 @@
 
 <footer>
   <div class="container">
-    <p>© 2026 Carla Tamara Boga · Tucumán, Argentina</p>
-    <p>Hecho con atención al detalle</p>
+    <p data-es="© 2026 Carla Tamara Boga · Tucumán, Argentina" data-en="© 2026 Carla Tamara Boga · Tucumán, Argentina">© 2026 Carla Tamara Boga · Tucumán, Argentina</p>
+    <p data-es="Hecho con atención al detalle" data-en="Built with attention to detail">Hecho con atención al detalle</p>
   </div>
 </footer>
 
@@ -1174,6 +1215,51 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ============ Language Switch ============
+  const langSwitch = document.getElementById('langSwitch');
+  const langOpts = langSwitch.querySelectorAll('.lang-opt');
+
+  function setLanguage(lang) {
+    // Cambiar todos los textos con data-es / data-en
+    document.querySelectorAll('[data-es][data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      // Si el texto contiene * - los convertimos a <em>
+      if (text.includes('*')) {
+        el.innerHTML = text.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+      } else {
+        el.textContent = text;
+      }
+    });
+    // Cambiar atributos HTML
+    document.documentElement.lang = lang;
+    document.title = (lang === 'es')
+      ? 'Carla Boga — Analista Funcional SAP S/4HANA'
+      : 'Carla Boga — SAP S/4HANA Functional Analyst';
+    // Update active button
+    langOpts.forEach(opt => {
+      opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+    });
+    // Save preference
+    try { localStorage.setItem('lang', lang); } catch(e) {}
+  }
+
+  langSwitch.addEventListener('click', (e) => {
+    const target = e.target.closest('.lang-opt');
+    if (target) {
+      setLanguage(target.getAttribute('data-lang'));
+    } else {
+      // Click en el botón sin ser una opción → toggle
+      const current = document.documentElement.lang || 'es';
+      setLanguage(current === 'es' ? 'en' : 'es');
+    }
+  });
+
+  // Restore preference (if any)
+  try {
+    const saved = localStorage.getItem('lang');
+    if (saved && saved !== 'es') setLanguage(saved);
+  } catch(e) {}
 </script>
 
 </body>

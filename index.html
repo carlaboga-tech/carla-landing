@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Carla Boga — Analista Funcional SAP S/4HANA</title>
 <meta name="description" content="Analista Funcional SAP S/4HANA | MM · WM · IM | Logística y Abastecimiento. Más de 3 años en entornos SAP y 5+ en gestión IT y análisis de procesos." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,8 @@
     line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    padding-left: max(2px, env(safe-area-inset-left));
+    padding-right: max(2px, env(safe-area-inset-right));
   }
 
   /* Noise texture overlay */
@@ -130,9 +132,76 @@
     font-weight: 300;
   }
 
+  /* ========== RESPONSIVE ========== */
+
+  /* Large desktop */
+  @media (max-width: 1200px) {
+    :root { --max: 960px; }
+  }
+
+  /* Tablet landscape / small desktop */
+  @media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .about-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+    .job { grid-template-columns: 160px 1fr; gap: 24px; }
+  }
+
+  /* iPad / Android tablet portrait */
+  @media (max-width: 900px) {
+    .container { padding: 0 16px; }
+    section { padding: 80px 0; }
+    .hero { padding: 120px 0 64px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-card { max-width: 260px; margin: 0 auto; order: -1; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .job { grid-template-columns: 1fr; gap: 8px; }
+    .projects-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .certs-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .edu-row { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* Mobile landscape / large phones */
   @media (max-width: 720px) {
     .nav-links a:not(.nav-cta) { display: none; }
     .lang-switch { display: inline-flex; }
+    .container { padding: 0 12px; }
+    .hero h1 { font-size: clamp(32px, 8vw, 56px); }
+    .section-title { font-size: clamp(28px, 6vw, 44px); }
+    .projects-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .certs-grid { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .contact h2 { font-size: clamp(36px, 8vw, 56px); }
+    .contact-buttons { flex-direction: column; align-items: center; }
+    .contact-big { font-size: clamp(18px, 4vw, 28px); }
+  }
+
+  /* iPhone / Android phones portrait */
+  @media (max-width: 480px) {
+    .container { padding: 0 8px; }
+    nav { padding: 14px 12px; }
+    .hero { padding: 100px 0 48px; }
+    .hero h1 { font-size: clamp(28px, 9vw, 44px); }
+    .hero-sub { font-size: 16px; }
+    .hero-ctas { flex-direction: column; gap: 10px; }
+    .btn { width: 100%; justify-content: center; }
+    .stat-num { font-size: 40px; }
+    .job-role { font-size: 20px; }
+    .section-title { font-size: clamp(24px, 7vw, 36px); }
+    .project { padding: 24px; }
+    .skill-cat { padding: 24px 20px; }
+    .cert { padding: 16px; }
+    .marquee-item { font-size: 16px; }
+    footer .container { flex-direction: column; text-align: center; gap: 8px; }
+  }
+
+  /* Small phones */
+  @media (max-width: 360px) {
+    .container { padding: 0 6px; }
+    .hero h1 { font-size: 26px; }
+    .stats { grid-template-columns: 1fr; }
   }
 
   /* ========== HERO ========== */
@@ -990,7 +1059,7 @@
   <div class="container">
     <div class="reveal">
       <div class="section-label" data-es="03b — Consultoría & Estrategia" data-en="03b — Consulting & Strategy">03b — Consultoría & Estrategia</div>
-      <h2 class="section-title"><span data-es="Negocio, marca y " data-en="Business, brand and ">Negocio, marca y </span><em data-es="estrategia" data-en="strategy">estrategia</em><span data-es=" antes de SAP." data-en=" before SAP."> antes de SAP.</span></h2>
+      <h2 class="section-title"><span data-es="Negocio, marca y " data-en="Business, brand and ">Negocio, marca y </span><em data-es="estrategia" data-en="strategy">estrategia</em><span data-es=" antes del SAP." data-en=" before SAP."> antes del SAP.</span></h2>
       <p class="section-intro" data-es="Antes de especializarme en SAP, trabajé como consultora independiente acompañando emprendimientos y empresas en definición de negocio, posicionamiento e identidad de marca. Esta mirada estratégica es lo que hoy diferencia mi perfil funcional." data-en="Before specializing in SAP, I worked as an independent consultant helping startups and businesses define their strategy, positioning and brand identity. This strategic perspective is what differentiates my functional profile today.">Antes de especializarme en SAP, trabajé como consultora independiente acompañando emprendimientos y empresas en definición de negocio, posicionamiento e identidad de marca. Esta mirada estratégica es lo que hoy diferencia mi perfil funcional.</p>
     </div>
 
@@ -1089,7 +1158,6 @@
           <span>MRP</span>
           <span>Finnegans</span>
           <span>Emerix</span>
-          <span>CRM</span>
         </div>
       </div>
 
@@ -1137,7 +1205,6 @@
           <span>SQL</span>
           <span>n8n</span>
           <span data-es="Excel Avanzado" data-en="Advanced Excel">Excel Avanzado</span>
-          <span data-es="Power BI básico" data-en="Basic Power BI">Power BI básico</span>
         </div>
       </div>
 

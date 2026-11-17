@@ -3,8 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Carla Boga — Analista Funcional SAP S/4HANA</title>
-<meta name="description" content="Analista Funcional SAP S/4HANA | MM · WM · IM | Business Analyst. Más de 3 años en entornos SAP, experiencia en Creatio CRM y 5+ en gestión IT y análisis de procesos." />
+<title>Carla Boga — Product Manager</title>
+<meta name="description" content="Carla Boga | Product Manager. Discovery, estrategia y ejecución, con base en análisis de negocio, gestión IT e implementaciones SAP S/4HANA y CRM." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://carla-landing.vercel.app/" />
+<meta property="og:title" content="Carla Boga — Product Manager" />
+<meta property="og:description" content="Discovery, estrategia y ejecución, con base en análisis de negocio, gestión IT e implementaciones SAP S/4HANA y CRM." />
+<meta property="og:locale" content="es_AR" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -751,6 +756,15 @@
     opacity: 1;
     transform: translateY(0);
   }
+  /* Ajustes móviles */
+  @media (max-width: 720px) {
+    .hero-card { width: 100%; }
+    #consultoria [style*="grid-template-columns: 1fr 1fr"],
+    #consultoria [style*="grid-template-columns: repeat(3, 1fr)"],
+    #consultoria [style*="grid-template-columns: repeat(auto-fit"] { grid-template-columns: 1fr !important; }
+    #consultoria [style*="padding: 48px"] { padding: 28px !important; }
+    #consultoria [style*="border-right: 1px solid"] { border-right: none !important; border-bottom: 1px solid var(--border); }
+  }
 </style>
 </head>
 <body>
@@ -761,8 +775,8 @@
     <div class="nav-links">
       <a href="#sobre-mi" data-es="Sobre mí" data-en="About">Sobre mí</a>
       <a href="#experiencia" data-es="Experiencia" data-en="Experience">Experiencia</a>
-      <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
-      <a href="#skills" data-es="Skills" data-en="Skills">Skills</a>
+      <a href="#consultoria" data-es="Proyectos" data-en="Projects">Proyectos</a>
+      <a href="#skills" data-es="Herramientas" data-en="Toolkit">Herramientas</a>
       <a href="#contacto" class="nav-cta" data-es="Contacto" data-en="Contact">Contacto</a>
       <button class="lang-switch" id="langSwitch" aria-label="Change language">
         <span class="lang-opt active" data-lang="es">ES</span>
@@ -783,12 +797,11 @@
           Carla Tamara <span class="name-accent">Boga</span>
         </h1>
         <p class="hero-role">
-          <span data-es="Analista Funcional" data-en="Functional Analyst">Analista Funcional</span> <strong>SAP S/4HANA</strong>
-          <span class="hero-role-tag">MM · WM · IM</span><br>
-          <span style="color: var(--ink-muted);">Business Analyst</span>
+          <strong>Product Manager</strong><br>
+          <span style="color: var(--ink-muted);" data-es="Product Owner · Business Analyst · Analista Funcional" data-en="Product Owner · Business Analyst · Functional Analyst">Product Owner · Business Analyst · Analista Funcional</span>
         </p>
         <p class="hero-sub">
-          <span data-es="Más de 3 años transformando procesos de logística, compras y abastecimiento con SAP MM · WM · IM, y experiencia como Business Analyst en implementaciones de CRM. Articulo lo que el negocio necesita con lo que la tecnología puede entregar." data-en="Over 3 years transforming logistics, procurement and supply chain processes with SAP MM · WM · IM, plus experience as a Business Analyst on CRM implementations. I bridge what the business needs with what technology can deliver.">Más de 3 años transformando procesos de logística, compras y abastecimiento con SAP MM · WM · IM, y experiencia como Business Analyst en implementaciones de CRM. Articulo lo que el negocio necesita con lo que la tecnología puede entregar.</span>
+          <span data-es="Más de 5 años en análisis de procesos, gestión IT e implementación de sistemas, hoy aplicados a la gestión de productos digitales." data-en="Over 5 years in process analysis, IT management and systems implementation, now applied to managing digital products.">Más de 5 años en análisis de procesos, gestión IT e implementación de sistemas, hoy aplicados a la gestión de productos digitales.</span>
         </p>
         <div class="hero-ctas">
           <a href="#contacto" class="btn btn-primary">
@@ -811,27 +824,23 @@
 <!-- Marquee -->
 <div class="marquee">
   <div class="marquee-track">
-    <span class="marquee-item">SAP MM</span>
-    <span class="marquee-item">Warehouse Management</span>
-    <span class="marquee-item">Inventory Management</span>
-    <span class="marquee-item">SAP Activate</span>
-    <span class="marquee-item">Procure-to-Pay</span>
-    <span class="marquee-item">UAT & Go-Live</span>
-    <span class="marquee-item">MRP</span>
-    <span class="marquee-item">Scrum Master</span>
+    <span class="marquee-item">Product Discovery</span>
+    <span class="marquee-item">Roadmap</span>
+    <span class="marquee-item">Backlog</span>
+    <span class="marquee-item" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span>
+    <span class="marquee-item">Scrum</span>
     <span class="marquee-item">Business Analysis</span>
-    <span class="marquee-item">Creatio CRM</span>
+    <span class="marquee-item">Stakeholder Management</span>
+    <span class="marquee-item">SAP S/4HANA</span>
     <!-- duplicado para el loop -->
-    <span class="marquee-item">SAP MM</span>
-    <span class="marquee-item">Warehouse Management</span>
-    <span class="marquee-item">Inventory Management</span>
-    <span class="marquee-item">SAP Activate</span>
-    <span class="marquee-item">Procure-to-Pay</span>
-    <span class="marquee-item">UAT & Go-Live</span>
-    <span class="marquee-item">MRP</span>
-    <span class="marquee-item">Scrum Master</span>
+    <span class="marquee-item">Product Discovery</span>
+    <span class="marquee-item">Roadmap</span>
+    <span class="marquee-item">Backlog</span>
+    <span class="marquee-item" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span>
+    <span class="marquee-item">Scrum</span>
     <span class="marquee-item">Business Analysis</span>
-    <span class="marquee-item">Creatio CRM</span>
+    <span class="marquee-item">Stakeholder Management</span>
+    <span class="marquee-item">SAP S/4HANA</span>
   </div>
 </div>
 
@@ -841,29 +850,29 @@
     <div class="about-grid">
       <div class="reveal">
         <div class="section-label" data-es="01 — Sobre mí" data-en="01 — About">01 — Sobre mí</div>
-        <h2 class="section-title"><span data-es="Traduzco procesos de negocio en " data-en="I translate business processes into ">Traduzco procesos de negocio en </span><em data-es="soluciones SAP" data-en="SAP solutions">soluciones SAP</em><span data-es=" que funcionan." data-en=" that actually work."> que funcionan.</span></h2>
+        <h2 class="section-title"><span data-es="Convierto necesidades del negocio en " data-en="I turn business needs into ">Convierto necesidades del negocio en </span><em data-es="productos" data-en="products">productos</em><span data-es=" que funcionan." data-en=" that actually work."> que funcionan.</span></h2>
         <div class="about-text">
-          <p data-es="Soy *Analista Funcional SAP S/4HANA*, especializada en procesos de compras, inventarios y operaciones logísticas." data-en="I'm a *SAP S/4HANA Functional Analyst*, specialized in procurement, inventory management and logistics operations.">Soy <em>Analista Funcional SAP S/4HANA</em>, especializada en procesos de compras, inventarios y operaciones logísticas.</p>
-          <p data-es="Mi experiencia previa liderando equipos de operaciones me dio una mirada que va más allá del sistema: entiendo cómo se sienten los procesos del lado del usuario, qué necesita el negocio para funcionar, y cómo traducir eso en soluciones SAP concretas y sostenibles." data-en="My previous experience leading operations teams gave me a perspective that goes beyond the system itself: I understand how processes feel from the user side, what the business needs to function, and how to translate that into concrete and sustainable SAP solutions.">Mi experiencia previa liderando equipos de operaciones me dio una mirada que va más allá del sistema: entiendo cómo se sienten los procesos del lado del usuario, qué necesita el negocio para funcionar, y cómo traducir eso en soluciones SAP concretas y sostenibles.</p>
-          <p data-es="Trabajo articulando áreas de negocio y equipos técnicos en proyectos de implementación, estabilización y mejora continua de circuitos Procure-to-Pay y, más recientemente, como Business Analyst en implementaciones de Creatio CRM, con foco en trazabilidad, eficiencia y estandarización." data-en="I bridge business stakeholders and technical teams across implementation, stabilization and continuous improvement projects of Procure-to-Pay processes and, most recently, as a Business Analyst on Creatio CRM implementations, focusing on traceability, efficiency and standardization.">Trabajo articulando áreas de negocio y equipos técnicos en proyectos de implementación, estabilización y mejora continua de circuitos Procure-to-Pay y, más recientemente, como Business Analyst en implementaciones de Creatio CRM, con foco en trazabilidad, eficiencia y estandarización.</p>
+          <p data-es="Soy *Product Manager*. Lidero el discovery y la definición de productos digitales, desde el relevamiento de la necesidad hasta su puesta en producción." data-en="I'm a *Product Manager*. I lead discovery and definition of digital products, from understanding the need to putting the solution into production.">Soy <em>Product Manager</em>. Lidero el discovery y la definición de productos digitales, desde el relevamiento de la necesidad hasta su puesta en producción.</p>
+          <p data-es="Antes de producto, trabajé en operaciones, gestión IT e implementación de sistemas: lideré un equipo de 9 analistas, gestioné la demanda de tecnología de una empresa con cinco proveedores IT y participé en una implementación de SAP S/4HANA para 150 usuarios. Esa experiencia me permite diseñar soluciones que contemplan tanto al usuario final como las condiciones reales de la operación." data-en="Before product, I worked in operations, IT management and systems implementation: I led a team of 9 analysts, managed a company's technology demand across five IT vendors and took part in an SAP S/4HANA implementation for 150 users. That experience lets me design solutions that account for both the end user and the real conditions of the operation.">Antes de producto, trabajé en operaciones, gestión IT e implementación de sistemas: lideré un equipo de 9 analistas, gestioné la demanda de tecnología de una empresa con cinco proveedores IT y participé en una implementación de SAP S/4HANA para 150 usuarios. Esa experiencia me permite diseñar soluciones que contemplan tanto al usuario final como las condiciones reales de la operación.</p>
+          <p data-es="Desde la consultoría sumé la mirada de mercado: investigación, propuesta de valor y posicionamiento, aplicados en el lanzamiento de KOKO y en el rebranding de Sunday Money. Busco aportar esa combinación de negocio, procesos y tecnología a un equipo de producto." data-en="Through consulting I added a market perspective: research, value proposition and positioning, applied to the launch of KOKO and the rebranding of Sunday Money. I'm looking to bring that combination of business, processes and technology to a product team.">Desde la consultoría sumé la mirada de mercado: investigación, propuesta de valor y posicionamiento, aplicados en el lanzamiento de KOKO y en el rebranding de Sunday Money. Busco aportar esa combinación de negocio, procesos y tecnología a un equipo de producto.</p>
         </div>
       </div>
       <div class="stats reveal">
-        <div class="stat">
-          <div class="stat-num">3<span class="plus">+</span></div>
-          <div class="stat-label" data-es="Años en entornos SAP S/4HANA" data-en="Years in SAP S/4HANA environments">Años en entornos SAP S/4HANA</div>
-        </div>
         <div class="stat">
           <div class="stat-num">5<span class="plus">+</span></div>
           <div class="stat-label" data-es="Años en análisis de procesos y gestión IT" data-en="Years in process analysis and IT management">Años en análisis de procesos y gestión IT</div>
         </div>
         <div class="stat">
-          <div class="stat-num">3</div>
-          <div class="stat-label" data-es="Módulos core: MM · WM · IM" data-en="Core modules: MM · WM · IM">Módulos core: MM · WM · IM</div>
+          <div class="stat-num">5</div>
+          <div class="stat-label" data-es="Proyectos de consultoría en negocio y marca" data-en="Business and brand consulting projects">Proyectos de consultoría en negocio y marca</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3<span class="plus">+</span></div>
+          <div class="stat-label" data-es="Años en implementaciones SAP S/4HANA" data-en="Years in SAP S/4HANA implementations">Años en implementaciones SAP S/4HANA</div>
         </div>
         <div class="stat">
           <div class="stat-num">13<span class="plus">+</span></div>
-          <div class="stat-label" data-es="Certificaciones en SAP, Agilidad y Product" data-en="Certifications in SAP, Agile and Product">Certificaciones en SAP, Agilidad y Product</div>
+          <div class="stat-label" data-es="Certificaciones en producto, agilidad y SAP" data-en="Certifications in product, agile and SAP">Certificaciones en producto, agilidad y SAP</div>
         </div>
       </div>
     </div>
@@ -875,16 +884,32 @@
   <div class="container">
     <div class="reveal">
       <div class="section-label" data-es="02 — Experiencia" data-en="02 — Experience">02 — Experiencia</div>
-      <h2 class="section-title"><span data-es="Una trayectoria que va de la " data-en="A career path going from ">Una trayectoria que va de la </span><em data-es="operación" data-en="operations">operación</em><span data-es=" a la consultoría funcional." data-en=" to functional consulting."> a la consultoría funcional.</span></h2>
+      <h2 class="section-title"><span data-es="Una trayectoria que va de la " data-en="A career path going from ">Una trayectoria que va de la </span><em data-es="operación" data-en="operations">operación</em><span data-es=" al producto." data-en=" to product."> al producto.</span></h2>
     </div>
 
     <div class="timeline">
+      <div class="job reveal">
+        <div class="job-date" data-es="FEB 2026 — ACTUALIDAD" data-en="FEB 2026 — PRESENT">FEB 2026 — ACTUALIDAD</div>
+        <div>
+          <h3 class="job-role">Product Manager</h3>
+          <div class="job-company">SVEN Consultora</div>
+          <p class="job-desc" data-es="Gestión de productos digitales y proyectos de consultoría en un equipo de 5 personas, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO." data-en="Management of digital products and consulting projects in a five-person team, from analyzing business needs to defining and delivering solutions. I lead discovery and functional definition of a web platform in development: user flows, Figma mockups, user stories and acceptance criteria. We also build Power BI dashboards and end-to-end brand and launch projects, such as KOKO.">Gestión de productos digitales y proyectos de consultoría en un equipo de 5 personas, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO.</p>
+          <div class="job-tags">
+            <span class="tag">Product Discovery</span>
+            <span class="tag" data-es="Historias de usuario" data-en="User stories">Historias de usuario</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Power BI</span>
+            <span class="tag" data-es="Validación funcional" data-en="Functional validation">Validación funcional</span>
+          </div>
+        </div>
+      </div>
+
       <div class="job reveal">
         <div class="job-date">JUL 2026 — SEP 2026</div>
         <div>
           <h3 class="job-role">Business Analyst — Creatio CRM</h3>
           <div class="job-company">Alkemia LLC</div>
-          <p class="job-desc" data-es="Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders para proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, articulando necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación." data-en="Gathering and analysis of functional requirements with users and stakeholders for Creatio CRM projects. Documentation of requirements, processes and business rules, bridging client needs with technical teams. Functional validation of configurations and developments during implementation.">Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders para proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, articulando necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación.</p>
+          <p class="job-desc" data-es="Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders en proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, para alinear las necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación." data-en="Gathering and analysis of functional requirements with users and stakeholders on Creatio CRM projects. Documentation of requirements, processes and business rules to align client needs with technical teams. Functional validation of configurations and developments during implementation.">Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders en proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, para alinear las necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación.</p>
           <div class="job-tags">
             <span class="tag">Creatio CRM</span>
             <span class="tag">Business Analysis</span>
@@ -900,7 +925,7 @@
         <div>
           <h3 class="job-role" data-es="Analista Funcional SAP S/4HANA — MM · WM · IM" data-en="SAP S/4HANA Functional Analyst — MM · WM · IM">Analista Funcional SAP S/4HANA — MM · WM · IM</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Implementación SAP S/4HANA bajo metodología SAP Activate (Explore, Realize, Deploy). Relevamiento As-Is, diseño To-Be, configuración funcional, integración MM/WM/FI, pruebas UAT end-to-end y soporte post go-live. Participación en la digitalización del circuito Procure-to-Pay." data-en="SAP S/4HANA implementation under SAP Activate methodology (Explore, Realize, Deploy). As-Is analysis, To-Be design, functional configuration, MM/WM/FI integration, end-to-end UAT testing and post go-live support. Active role in the digitization of the Procure-to-Pay process.">Implementación SAP S/4HANA bajo metodología SAP Activate (Explore, Realize, Deploy). Relevamiento As-Is, diseño To-Be, configuración funcional, integración MM/WM/FI, pruebas UAT end-to-end y soporte post go-live. Participación en la digitalización del circuito Procure-to-Pay.</p>
+          <p class="job-desc" data-es="Implementación de SAP S/4HANA con la metodología SAP Activate para unos 150 usuarios (1 sociedad, 2 sucursales y 2 depósitos), con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live." data-en="SAP S/4HANA implementation using the SAP Activate methodology for about 150 users (1 company code, 2 branches and 2 warehouses), covering MM, WM, SD and FI/CO. My functional focus: MM, WM and IM. As-Is analysis, To-Be design, functional configuration, FI integration, end-to-end UAT and post go-live support.">Implementación de SAP S/4HANA con la metodología SAP Activate para unos 150 usuarios (1 sociedad, 2 sucursales y 2 depósitos), con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live.</p>
           <div class="job-tags">
             <span class="tag">SAP S/4HANA</span>
             <span class="tag">SAP Activate</span>
@@ -914,11 +939,11 @@
       </div>
 
       <div class="job reveal">
-        <div class="job-date">DIC 2022 — NOV 2023</div>
+        <div class="job-date" data-es="DIC 2022 — NOV 2023" data-en="DEC 2022 — NOV 2023">DIC 2022 — NOV 2023</div>
         <div>
-          <h3 class="job-role" data-es="IT Project Manager — Gestión de la Demanda TI" data-en="IT Project Manager — IT Demand Management">IT Project Manager — Gestión de la Demanda TI</h3>
+          <h3 class="job-role" data-es="IT Project Manager — Gestión de la demanda IT" data-en="IT Project Manager — IT Demand Management">IT Project Manager — Gestión de la demanda IT</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Relevamiento y estructuración de requerimientos tecnológicos transversales al negocio. Gestión y priorización del backlog, coordinación con stakeholders, equipos técnicos y proveedores IT hasta la puesta en producción." data-en="Gathering and structuring cross-business technology requirements. Backlog management and prioritization, coordination with stakeholders, technical teams and IT vendors through production rollout.">Relevamiento y estructuración de requerimientos tecnológicos transversales al negocio. Gestión y priorización del backlog, coordinación con stakeholders, equipos técnicos y proveedores IT hasta la puesta en producción.</p>
+          <p class="job-desc" data-es="Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de unos 5 proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción." data-en="Identified technology needs across business areas and translated them into requirements. Prioritized demand by value and impact, and coordinated about 5 IT vendors, each with its own backlog, together with business areas and technical teams through production rollout.">Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de unos 5 proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción.</p>
           <div class="job-tags">
             <span class="tag">Project Management</span>
             <span class="tag">Stakeholder Management</span>
@@ -929,30 +954,30 @@
       </div>
 
       <div class="job reveal">
-        <div class="job-date">FEB 2021 — DIC 2022</div>
+        <div class="job-date" data-es="FEB 2021 — DIC 2022" data-en="FEB 2021 — DEC 2022">FEB 2021 — DIC 2022</div>
         <div>
           <h3 class="job-role" data-es="Jefa de Control de Operaciones" data-en="Operations Control Manager">Jefa de Control de Operaciones</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Liderazgo del equipo administrativo responsable de circuitos de compras, pagos y facturación. Reorganización de procesos internos para fortalecer controles y reducir desvíos. Diseño de tableros de indicadores." data-en="Led the administrative team responsible for procurement, payments and billing processes. Reorganized internal processes to strengthen controls and reduce deviations. Designed KPI dashboards for operations management.">Liderazgo del equipo administrativo responsable de circuitos de compras, pagos y facturación. Reorganización de procesos internos para fortalecer controles y reducir desvíos. Diseño de tableros de indicadores.</p>
+          <p class="job-desc" data-es="Liderazgo de un equipo de 9 analistas a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores." data-en="Led a team of 9 analysts in charge of procurement, payments and billing processes. Reorganized processes to strengthen controls: more supplier payments made on time and in full without losing early-payment discounts, and fewer incidents from pricing errors or defective goods. Designed KPI dashboards.">Liderazgo de un equipo de 9 analistas a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores.</p>
           <div class="job-tags">
-            <span class="tag">Liderazgo</span>
+            <span class="tag" data-es="Liderazgo" data-en="Leadership">Liderazgo</span>
             <span class="tag">Procure-to-Pay</span>
             <span class="tag">KPIs</span>
-            <span class="tag">Excel Avanzado</span>
+            <span class="tag" data-es="Excel avanzado" data-en="Advanced Excel">Excel avanzado</span>
           </div>
         </div>
       </div>
 
       <div class="job reveal">
-        <div class="job-date">JUL 2019 — ENE 2021</div>
+        <div class="job-date" data-es="JUL 2019 — ENE 2021" data-en="JUL 2019 — JAN 2021">JUL 2019 — ENE 2021</div>
         <div>
           <h3 class="job-role" data-es="Jefa de Operaciones — PMO" data-en="Operations Manager — PMO">Jefa de Operaciones — PMO</h3>
           <div class="job-company">Recupero Crediticio</div>
-          <p class="job-desc" data-es="Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recuperación e indicadores de performance." data-en="Coordinated operations teams dedicated to collections and recovery campaigns. Built commercial and financial reports. Defined recovery strategies and performance indicators.">Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recuperación e indicadores de performance.</p>
+          <p class="job-desc" data-es="Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño." data-en="Coordinated operations teams dedicated to collections and recovery campaigns. Built commercial and financial reports. Defined recovery strategies and performance indicators.">Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño.</p>
           <div class="job-tags">
             <span class="tag">PMO</span>
             <span class="tag">Reporting</span>
-            <span class="tag">Gestión de Equipos</span>
+            <span class="tag" data-es="Gestión de equipos" data-en="Team management">Gestión de equipos</span>
           </div>
         </div>
       </div>
@@ -960,31 +985,129 @@
   </div>
 </section>
 
-<!-- ========== PROYECTOS ========== -->
-<section id="proyectos" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<!-- ========== CONSULTORÍA & ESTRATEGIA ========== -->
+<section id="consultoria" style="background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
     <div class="reveal">
-      <div class="section-label" data-es="03 — Proyectos destacados" data-en="03 — Featured projects">03 — Proyectos destacados</div>
-      <h2 class="section-title"><span data-es="Implementaciones donde " data-en="Implementations where ">Implementaciones donde </span><em data-es="dejé huella" data-en="I made an impact">dejé huella</em><span data-es="." data-en=".">.</span></h2>
-      <p class="section-intro" data-es="Una selección de los proyectos más representativos de mi trabajo con SAP, simplificación de back office y digitalización de procesos administrativos." data-en="A selection of the most representative projects of my work with SAP, back office simplification and digitization of administrative processes.">Una selección de los proyectos más representativos de mi trabajo con SAP, simplificación de back office y digitalización de procesos administrativos.</p>
+      <div class="section-label" data-es="03 — Producto y estrategia" data-en="03 — Product &amp; strategy">03 — Producto y estrategia</div>
+      <h2 class="section-title"><span data-es="De la idea al " data-en="From idea to ">De la idea al </span><em data-es="lanzamiento" data-en="launch">lanzamiento</em><span data-es="." data-en=".">.</span></h2>
+      <p class="section-intro" data-es="Proyectos de consultoría en los que acompañé a cada cliente en todo el ciclo: investigación de mercado, propuesta de valor, posicionamiento, identidad de marca y puesta en marcha. Hoy, desde SVEN Consultora." data-en="Consulting projects where I supported each client through the full cycle: market research, value proposition, positioning, brand identity and rollout. Today, through SVEN Consultora.">Proyectos de consultoría en los que acompañé a cada cliente en todo el ciclo: investigación de mercado, propuesta de valor, posicionamiento, identidad de marca y puesta en marcha. Hoy, desde SVEN Consultora.</p>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 24px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0;">
+        <div style="padding: 48px;">
+          <div style="display:flex; gap:8px; margin-bottom: 24px; flex-wrap: wrap;">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;" data-es="Proyecto más reciente" data-en="Latest project">Proyecto más reciente</span>
+            <span style="font-size: 11px; color: var(--ink-dim); border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;" data-es="Gastronomía · 2026" data-en="Food &amp; beverage · 2026">Gastronomía · 2026</span>
+          </div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">KOKO</h3>
+          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;" data-es="Del naming a la apertura del local · SVEN Consultora" data-en="From naming to store opening · SVEN Consultora">Del naming a la apertura del local · SVEN Consultora</p>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán. Lideré el proyecto junto al equipo de SVEN desde la idea inicial: investigación de mercado, naming, tagline, personaje, identidad visual, manual de marca, packaging, uniformes del personal y montaje del local, inaugurado a fines de agosto de 2026." data-en="End-to-end creation of a new coffee, frozen yogurt and soft-serve brand in downtown San Miguel de Tucumán. I led the project with the SVEN team from the initial idea: market research, naming, tagline, mascot, visual identity, brand guidelines, packaging, staff uniforms and store setup, which opened in late August 2026.">Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán. Lideré el proyecto junto al equipo de SVEN desde la idea inicial: investigación de mercado, naming, tagline, personaje, identidad visual, manual de marca, packaging, uniformes del personal y montaje del local, inaugurado a fines de agosto de 2026.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="tag" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span><span class="tag">Naming</span><span class="tag">Branding</span><span class="tag" data-es="Manual de marca" data-en="Brand guidelines">Manual de marca</span><span class="tag">Packaging</span><span class="tag" data-es="Lanzamiento" data-en="Launch">Lanzamiento</span>
+          </div>
+        </div>
+        <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Investigación" data-en="Research">Investigación</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Relevamiento de campo de 44 establecimientos del corredor gastronómico del centro: panorama competitivo, precios y patrones de consumo por horario." data-en="Field survey of 44 businesses in the downtown food corridor: competitive landscape, pricing and consumption patterns by time of day.">Relevamiento de campo de 44 establecimientos del corredor gastronómico del centro: panorama competitivo, precios y patrones de consumo por horario.</p>
+          </div>
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Identidad de marca" data-en="Brand identity">Identidad de marca</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Definición de nombre, tagline, personaje, paleta cromática y tipografía, documentados en un manual de identidad corporativa." data-en="Definition of name, tagline, mascot, color palette and typography, documented in a corporate identity manual.">Definición de nombre, tagline, personaje, paleta cromática y tipografía, documentados en un manual de identidad corporativa.</p>
+          </div>
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Puesta en marcha" data-en="Rollout">Puesta en marcha</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Aplicación de la marca en packaging (vasos, conos, bolsas y stickers), uniformes del personal y montaje del local desde cero." data-en="Brand rollout across packaging (cups, cones, bags and stickers), staff uniforms and setting up the store from scratch.">Aplicación de la marca en packaging (vasos, conos, bolsas y stickers), uniformes del personal y montaje del local desde cero.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-bottom: 48px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
+        <div style="padding: 48px; border-right: 1px solid var(--border);">
+          <div style="display:flex; gap:8px; margin-bottom: 24px; flex-wrap: wrap;">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;" data-es="Caso destacado" data-en="Featured case">Caso destacado</span>
+            <span style="font-size: 11px; color: var(--ink-dim); border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Fintech · 2022–2024</span>
+          </div>
+          <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">Sunday Money</h3>
+          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;" data-es="De asesora de marketing a directora del equipo" data-en="From marketing advisor to team lead">De asesora de marketing a directora del equipo</p>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Ingresé como asesora de marketing en una fintech con identidad difusa. A partir de una investigación de mercado integral, identifiqué que el problema era de posicionamiento, no de comunicación. Presenté la recomendación al directorio, lideré el proceso de rebranding y asumí la dirección del equipo de marketing interno." data-en="I joined a fintech with a blurred identity as a marketing advisor. Through comprehensive market research, I found the problem was positioning, not communication. I presented the recommendation to the board, led the rebranding process and took over leadership of the in-house marketing team.">Ingresé como asesora de marketing en una fintech con identidad difusa. A partir de una investigación de mercado integral, identifiqué que el problema era de posicionamiento, no de comunicación. Presenté la recomendación al directorio, lideré el proceso de rebranding y asumí la dirección del equipo de marketing interno.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="tag" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span><span class="tag">Rebranding</span><span class="tag" data-es="Estrategia de negocio" data-en="Business strategy">Estrategia de negocio</span><span class="tag" data-es="Dirección de equipo" data-en="Team leadership">Dirección de equipo</span><span class="tag">Product Marketing</span>
+          </div>
+        </div>
+        <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Diagnóstico" data-en="Diagnosis">Diagnóstico</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Investigación del ecosistema fintech: análisis competitivo, segmentación de usuarios y detección de brechas de posicionamiento." data-en="Research of the fintech ecosystem: competitive analysis, user segmentation and identification of positioning gaps.">Investigación del ecosistema fintech: análisis competitivo, segmentación de usuarios y detección de brechas de posicionamiento.</p>
+          </div>
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Decisión estratégica" data-en="Strategic decision">Decisión estratégica</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Presentación al directorio con recomendación de rebranding integral. La propuesta fue aprobada e inició un proceso de transformación de seis meses." data-en="Board presentation recommending a full rebrand. The proposal was approved and kicked off a six-month transformation.">Presentación al directorio con recomendación de rebranding integral. La propuesta fue aprobada e inició un proceso de transformación de seis meses.</p>
+          </div>
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Liderazgo del equipo" data-en="Team leadership">Liderazgo del equipo</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Dirección del equipo de marketing interno, integrado por un analista y un diseñador. Campañas, SEO, contenidos, redes y medición con Google Analytics." data-en="Led the in-house marketing team of one analyst and one designer. Campaigns, SEO, content, social media and measurement with Google Analytics.">Dirección del equipo de marketing interno, integrado por un analista y un diseñador. Campañas, SEO, contenidos, redes y medición con Google Analytics.</p>
+          </div>
+          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Resultado" data-en="Outcome">Resultado</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Una web más clara para el usuario, una solicitud de préstamo más simple y un menor tiempo promedio de evaluación crediticia." data-en="A clearer website for users, a simpler loan application and a shorter average credit assessment time.">Una web más clara para el usuario, una solicitud de préstamo más simple y un menor tiempo promedio de evaluación crediticia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="reveal">
+      <div class="project reveal">
+        <div class="project-year">2022 — 2023</div>
+        <h3 class="project-title">Radio Ubuntu FM 94.9</h3>
+        <p class="project-desc" data-es="Estrategia de comunicación y organización de la propuesta comercial. Gestión de espacios publicitarios y coordinación con anunciantes." data-en="Communication strategy and structuring of the commercial offer. Management of advertising slots and coordination with advertisers.">Estrategia de comunicación y organización de la propuesta comercial. Gestión de espacios publicitarios y coordinación con anunciantes.</p>
+        <div class="project-stack"><span class="tag" data-es="Estrategia" data-en="Strategy">Estrategia</span><span class="tag" data-es="Contenidos" data-en="Content">Contenidos</span><span class="tag" data-es="Comercialización" data-en="Sales">Comercialización</span></div>
+      </div>
+      <div class="project reveal">
+        <div class="project-year">2022 — 2023</div>
+        <h3 class="project-title">Sithio Amoblamientos</h3>
+        <p class="project-desc" data-es="Análisis competitivo, posicionamiento de marca y propuesta comercial diferenciada con lineamientos de presencia digital." data-en="Competitive analysis, brand positioning and a differentiated commercial offer with digital presence guidelines.">Análisis competitivo, posicionamiento de marca y propuesta comercial diferenciada con lineamientos de presencia digital.</p>
+        <div class="project-stack"><span class="tag">Branding</span><span class="tag" data-es="Análisis competitivo" data-en="Competitive analysis">Análisis competitivo</span><span class="tag" data-es="Marketing digital" data-en="Digital marketing">Marketing digital</span></div>
+      </div>
+      <div class="project reveal">
+        <div class="project-year">2023 — 2024</div>
+        <h3 class="project-title">Blocus</h3>
+        <p class="project-desc" data-es="Conceptualización de una startup: investigación de mercado, modelo de negocio y narrativa para inversores." data-en="Startup concept development: market research, business model and investor narrative.">Conceptualización de una startup: investigación de mercado, modelo de negocio y narrativa para inversores.</p>
+        <div class="project-stack"><span class="tag" data-es="Investigación" data-en="Research">Investigación</span><span class="tag" data-es="Modelo de negocio" data-en="Business model">Modelo de negocio</span><span class="tag">Pitch</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PROYECTOS ========== -->
+<section id="proyectos">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" data-es="04 — Transformación digital" data-en="04 — Digital transformation">04 — Transformación digital</div>
+      <h2 class="section-title"><span data-es="Del relevamiento a la " data-en="From discovery to ">Del relevamiento a la </span><em data-es="puesta en producción" data-en="production">puesta en producción</em><span data-es="." data-en=".">.</span></h2>
+      <p class="section-intro" data-es="Implementación de SAP S/4HANA, simplificación del back office y digitalización del circuito de pago a proveedores." data-en="SAP S/4HANA implementation, back office simplification and digitization of the supplier payment process.">Implementación de SAP S/4HANA, simplificación del back office y digitalización del circuito de pago a proveedores.</p>
     </div>
 
     <div class="projects-grid">
       <div class="project reveal">
         <div class="project-year">2025 — 2026</div>
         <h3 class="project-title" data-es="PSB — Plan de Simplificación del Back Office" data-en="PSB — Back Office Simplification Plan">PSB — Plan de Simplificación del Back Office</h3>
-        <p class="project-desc" data-es="Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo inter-áreas para rediseño de Cash Flow, presupuesto y Procure-to-Pay. Análisis de FTE por puesto." data-en="As-Is analysis and To-Be design of administrative and financial processes. Coordinated cross-functional working sessions to redesign Cash Flow, budgeting and Procure-to-Pay. FTE analysis per role.">Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo inter-áreas para rediseño de Cash Flow, presupuesto y Procure-to-Pay. Análisis de FTE por puesto.</p>
+        <p class="project-desc" data-es="Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo entre áreas para rediseñar el flujo de caja, el presupuesto y el circuito Procure-to-Pay. Análisis de dotación (FTE) por puesto." data-en="As-Is analysis and To-Be design of administrative and financial processes. Coordinated cross-functional working sessions to redesign cash flow, budgeting and Procure-to-Pay. Headcount (FTE) analysis per role.">Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo entre áreas para rediseñar el flujo de caja, el presupuesto y el circuito Procure-to-Pay. Análisis de dotación (FTE) por puesto.</p>
         <div class="project-stack">
-          <span class="tag">Process Design</span>
+          <span class="tag" data-es="Diseño de procesos" data-en="Process design">Diseño de procesos</span>
           <span class="tag">As-Is / To-Be</span>
-          <span class="tag">P2P</span>
+          <span class="tag">Procure-to-Pay</span>
         </div>
       </div>
 
       <div class="project reveal">
         <div class="project-year">2023 — 2025</div>
         <h3 class="project-title" data-es="Implementación SAP S/4HANA" data-en="SAP S/4HANA Implementation">Implementación SAP S/4HANA</h3>
-        <p class="project-desc" data-es="Implementación end-to-end bajo SAP Activate. Participación en relevamiento funcional, configuración de MM/WM/IM, diseño To-Be, pruebas UAT y soporte durante go-live y estabilización." data-en="End-to-end implementation under SAP Activate. Active participation in functional analysis, MM/WM/IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación end-to-end bajo SAP Activate. Participación en relevamiento funcional, configuración de MM/WM/IM, diseño To-Be, pruebas UAT y soporte durante go-live y estabilización.</p>
+        <p class="project-desc" data-es="Implementación de punta a punta con la metodología SAP Activate para unos 150 usuarios, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización." data-en="End-to-end implementation using the SAP Activate methodology for about 150 users, covering MM, WM, SD and FI/CO. Functional analysis, MM, WM and IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación de punta a punta con la metodología SAP Activate para unos 150 usuarios, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización.</p>
         <div class="project-stack">
           <span class="tag">S/4HANA</span>
           <span class="tag">SAP Activate</span>
@@ -995,106 +1118,12 @@
       <div class="project reveal">
         <div class="project-year">2021 — 2023</div>
         <h3 class="project-title" data-es="Legajo Digital & Portal de Proveedores" data-en="Digital Records & Supplier Portal">Legajo Digital & Portal de Proveedores</h3>
-        <p class="project-desc" data-es="Digitalización del circuito de pago a proveedores desde orden de compra hasta orden de pago. Implementación de plataforma con workflow de aprobaciones y portal de autogestión." data-en="Digitization of the supplier payment process from purchase order to payment order. Platform implementation with approval workflow and self-service supplier portal.">Digitalización del circuito de pago a proveedores desde orden de compra hasta orden de pago. Implementación de plataforma con workflow de aprobaciones y portal de autogestión.</p>
+        <p class="project-desc" data-es="Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago. Implementación de una plataforma con workflow de aprobaciones y un portal de autogestión para proveedores." data-en="Digitization of the supplier payment process, from purchase order to payment order. Implementation of a platform with an approval workflow and a self-service supplier portal.">Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago. Implementación de una plataforma con workflow de aprobaciones y un portal de autogestión para proveedores.</p>
         <div class="project-stack">
-          <span class="tag">Workflow</span>
-          <span class="tag">Digitalización</span>
-          <span class="tag">Portal</span>
+          <span class="tag" data-es="Workflow de aprobaciones" data-en="Approval workflow">Workflow de aprobaciones</span>
+          <span class="tag" data-es="Digitalización" data-en="Digitization">Digitalización</span>
+          <span class="tag" data-es="Portal de proveedores" data-en="Supplier portal">Portal de proveedores</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== CONSULTORÍA & ESTRATEGIA ========== -->
-<section id="consultoria" style="border-top: 1px solid var(--border);">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">03b — Consultoría &amp; Estrategia</div>
-      <h2 class="section-title">Negocio, marca y <em>estrategia</em>, además de SAP.</h2>
-      <p class="section-intro">En paralelo a mi trabajo en SAP, acompaño emprendimientos y empresas como consultora en definición de negocio, posicionamiento e identidad de marca, hoy desde SVEN Consultora.</p>
-    </div>
-
-    <div class="reveal" style="margin-bottom: 24px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0;">
-        <div style="padding: 48px;">
-          <div style="display:flex; gap:8px; margin-bottom: 24px; flex-wrap: wrap;">
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Proyecto más reciente</span>
-            <span style="font-size: 11px; color: var(--ink-dim); border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Gastronomía · 2026</span>
-          </div>
-          <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">KOKO</h3>
-          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;">De una idea a una marca con local propio · SVEN Consultora</p>
-          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;">Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán. Acompañamos al cliente desde la idea inicial: investigación de mercado, naming, tagline, personaje, identidad visual, manual de marca, packaging, uniformes del equipo y montaje del local.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="tag">Investigación de mercado</span><span class="tag">Naming</span><span class="tag">Branding</span><span class="tag">Manual de marca</span><span class="tag">Packaging</span>
-          </div>
-        </div>
-        <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Investigación</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Relevamiento de campo de 44 establecimientos del corredor gastronómico del centro: panorama competitivo, precios y patrones de consumo por horario.</p>
-          </div>
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Identidad de marca</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Definición de nombre, tagline, personaje, paleta cromática y tipografía, documentados en un manual de identidad corporativa.</p>
-          </div>
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Puesta en marcha</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Aplicación de la marca en packaging (vasos, conos, bolsas y stickers), uniformes del equipo y montaje del local desde cero.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="reveal" style="margin-bottom: 48px; border: 1px solid var(--border); background: var(--surface); border-radius: var(--radius);">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-        <div style="padding: 48px; border-right: 1px solid var(--border);">
-          <div style="display:flex; gap:8px; margin-bottom: 24px; flex-wrap: wrap;">
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Caso destacado</span>
-            <span style="font-size: 11px; color: var(--ink-dim); border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Fintech · 2022–2024</span>
-          </div>
-          <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">Sunday Money</h3>
-          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;">De asesora de marketing a directora del equipo</p>
-          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;">Ingresé como asesora de marketing en una fintech con identidad difusa. A partir de una investigación de mercado integral, identifiqué que el problema era de posicionamiento, no de comunicación. Presenté la recomendación al directorio, lideré el proceso de rebranding y asumí la dirección del equipo de marketing interno.</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
-            <span class="tag">Investigación de mercado</span><span class="tag">Rebranding</span><span class="tag">Estrategia de negocio</span><span class="tag">Dirección de equipo</span>
-          </div>
-        </div>
-        <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Diagnóstico</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Investigación del ecosistema fintech: análisis competitivo, segmentación de usuarios y detección de brechas de posicionamiento.</p>
-          </div>
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Decisión estratégica</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Presentación al directorio con recomendación de rebranding integral. La propuesta fue aprobada e inició un proceso de transformación de seis meses.</p>
-          </div>
-          <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;">Liderazgo del equipo</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;">Dirección del equipo de marketing interno — analista y diseñador. Campañas, SEO, contenidos y redes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="reveal">
-      <div class="project reveal">
-        <div class="project-year">2022 — 2023</div>
-        <h3 class="project-title">Radio Ubuntu FM 94.9</h3>
-        <p class="project-desc">Estrategia de comunicación y organización de la propuesta comercial. Gestión de espacios publicitarios y coordinación con anunciantes.</p>
-        <div class="project-stack"><span class="tag">Estrategia</span><span class="tag">Contenidos</span><span class="tag">Comercialización</span></div>
-      </div>
-      <div class="project reveal">
-        <div class="project-year">2022 — 2023</div>
-        <h3 class="project-title">Sithio Amoblamientos</h3>
-        <p class="project-desc">Análisis competitivo, posicionamiento de marca y propuesta comercial diferenciada con lineamientos de presencia digital.</p>
-        <div class="project-stack"><span class="tag">Branding</span><span class="tag">Análisis competitivo</span><span class="tag">Marketing digital</span></div>
-      </div>
-      <div class="project reveal">
-        <div class="project-year">2023 — 2024</div>
-        <h3 class="project-title">Blocus</h3>
-        <p class="project-desc">Conceptualización de startup: investigación de mercado, modelo de negocio y narrativa para inversores.</p>
-        <div class="project-stack"><span class="tag">Research</span><span class="tag">Modelo de negocio</span><span class="tag">Pitch</span></div>
       </div>
     </div>
   </div>
@@ -1104,72 +1133,81 @@
 <section id="skills" class="skills">
   <div class="container">
     <div class="reveal">
-      <div class="section-label" data-es="04 — Stack & competencias" data-en="04 — Stack & expertise">04 — Stack & competencias</div>
-      <h2 class="section-title"><span data-es="Las herramientas que " data-en="The tools I ">Las herramientas que </span><em data-es="domino" data-en="master">domino</em><span data-es=" día a día." data-en=" every day."> día a día.</span></h2>
+      <div class="section-label" data-es="05 — Herramientas" data-en="05 — Toolkit">05 — Herramientas</div>
+      <h2 class="section-title"><span data-es="Herramientas y " data-en="Tools and ">Herramientas y </span><em data-es="metodologías" data-en="methodologies">metodologías</em><span data-es="." data-en=".">.</span></h2>
     </div>
 
     <div class="skills-grid reveal">
       <div class="skill-cat">
-        <div class="skill-cat-title" data-es="ERP, CRM & SAP" data-en="ERP, CRM & SAP">ERP, CRM & SAP</div>
+        <div class="skill-cat-title" data-es="Prácticas de producto" data-en="Product practices">Prácticas de producto</div>
         <div class="skill-list">
-          <span>SAP S/4HANA</span>
-          <span>MM</span>
-          <span>WM</span>
-          <span>IM</span>
-          <span>MRP</span>
+          <span>Product Discovery</span>
+          <span>Roadmap</span>
+          <span data-es="Gestión de backlog" data-en="Backlog management">Gestión de backlog</span>
+          <span data-es="Historias de usuario" data-en="User stories">Historias de usuario</span>
+          <span data-es="Criterios de aceptación" data-en="Acceptance criteria">Criterios de aceptación</span>
+          <span data-es="Pruebas UAT" data-en="UAT testing">Pruebas UAT</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title" data-es="Metodologías" data-en="Methodologies">Metodologías</div>
+        <div class="skill-list">
+          <span>Scrum</span>
           <span>SAP Activate</span>
+          <span>BPMN</span>
+          <span data-es="As-Is / To-Be" data-en="As-Is / To-Be">As-Is / To-Be</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title">SAP</div>
+        <div class="skill-list">
+          <span>S/4HANA — MM · WM · IM</span>
+          <span data-es="SAP Query e Infosets" data-en="SAP Query and Infosets">SAP Query e Infosets</span>
+          <span data-es="Debugging ABAP (SE38)" data-en="ABAP debugging (SE38)">Debugging ABAP (SE38)</span>
+        </div>
+      </div>
+
+      <div class="skill-cat">
+        <div class="skill-cat-title" data-es="Otros ERP y CRM" data-en="Other ERP and CRM">Otros ERP y CRM</div>
+        <div class="skill-list">
+          <span>Creatio CRM</span>
           <span>Finnegans</span>
           <span>Emerix</span>
-          <span>Creatio CRM</span>
-          <span>No-Code</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Gestión de proyectos" data-en="Project Management">Gestión de proyectos</div>
+        <div class="skill-cat-title" data-es="Gestión de proyectos y tickets" data-en="Project and ticket management">Gestión de proyectos y tickets</div>
         <div class="skill-list">
           <span>Jira</span>
-          <span>Redmine</span>
-          <span>Zendesk</span>
-          <span>Mantis</span>
-          <span>Trello</span>
           <span>Asana</span>
-          <span>Scrum</span>
+          <span>Trello</span>
+          <span>Redmine</span>
+          <span>Mantis</span>
+          <span>Zendesk</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Colaboración" data-en="Collaboration">Colaboración</div>
+        <div class="skill-cat-title" data-es="Diseño y colaboración" data-en="Design and collaboration">Diseño y colaboración</div>
         <div class="skill-list">
-          <span>Microsoft Teams</span>
+          <span>Figma</span>
           <span>Miro</span>
           <span>Mural</span>
-          <span>Figma</span>
+          <span>Microsoft Teams</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Tecnologías" data-en="Technologies">Tecnologías</div>
+        <div class="skill-cat-title" data-es="Datos y automatización" data-en="Data and automation">Datos y automatización</div>
         <div class="skill-list">
-          <span data-es="Debugging ABAP" data-en="ABAP Debugging">Debugging ABAP</span>
-          <span>SE38</span>
-          <span>SAP Query</span>
-          <span>Infosets</span>
+          <span>Power BI</span>
+          <span>Google Analytics</span>
           <span>SQL</span>
+          <span data-es="Excel avanzado" data-en="Advanced Excel">Excel avanzado</span>
           <span>n8n</span>
-          <span data-es="Excel Avanzado" data-en="Advanced Excel">Excel Avanzado</span>
-        </div>
-      </div>
-
-      <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Competencias clave" data-en="Key competencies">Competencias clave</div>
-        <div class="skill-list">
-          <span data-es="Análisis de procesos" data-en="Process analysis">Análisis de procesos</span>
-          <span data-es="Relevamiento funcional" data-en="Functional analysis">Relevamiento funcional</span>
-          <span data-es="Documentación funcional" data-en="Functional documentation">Documentación funcional</span>
-          <span>UAT end-to-end</span>
-          <span data-es="Integración MM/WM/FI" data-en="MM/WM/FI integration">Integración MM/WM/FI</span>
-          <span data-es="Soporte post go-live" data-en="Post go-live support">Soporte post go-live</span>
         </div>
       </div>
 
@@ -1177,7 +1215,7 @@
         <div class="skill-cat-title" data-es="Idiomas" data-en="Languages">Idiomas</div>
         <div class="skill-list">
           <span data-es="Español — Nativo" data-en="Spanish — Native">Español — Nativo</span>
-          <span data-es="Inglés — Intermedio" data-en="English — Intermediate">Inglés — Intermedio</span>
+          <span data-es="Inglés — Lectura y escritura intermedias, conversación básica" data-en="English — Intermediate reading and writing, basic conversation">Inglés — Lectura y escritura intermedias, conversación básica</span>
           <span data-es="Portugués — Básico" data-en="Portuguese — Basic">Portugués — Básico</span>
         </div>
       </div>
@@ -1189,12 +1227,68 @@
 <section id="certificaciones">
   <div class="container">
     <div class="reveal">
-      <div class="section-label" data-es="05 — Formación" data-en="05 — Education">05 — Formación</div>
-      <h2 class="section-title"><span data-es="Certificaciones & " data-en="Certifications & ">Certificaciones & </span><em data-es="educación" data-en="education">educación</em>.</h2>
-      <p class="section-intro" data-es="Formación continua en SAP, metodologías ágiles, product management y — más recientemente — automatización con inteligencia artificial." data-en="Continuous training in SAP, agile methodologies, product management and — more recently — automation with artificial intelligence.">Formación continua en SAP, metodologías ágiles, product management y — más recientemente — automatización con inteligencia artificial.</p>
+      <div class="section-label" data-es="06 — Formación" data-en="06 — Education">06 — Formación</div>
+      <h2 class="section-title"><span data-es="Certificaciones y " data-en="Certifications and ">Certificaciones y </span><em data-es="educación" data-en="education">educación</em>.</h2>
+      <p class="section-intro" data-es="Formación continua en gestión de producto, metodologías ágiles y SAP, y más recientemente en automatización con inteligencia artificial." data-en="Continuous training in product management, agile methodologies and SAP, and more recently in automation with artificial intelligence.">Formación continua en gestión de producto, metodologías ágiles y SAP, y más recientemente en automatización con inteligencia artificial.</p>
     </div>
 
     <div class="certs-grid reveal">
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+        <div>
+          <div class="cert-name">Registered Product Owner™</div>
+          <div class="cert-meta">Scrum Inc · 2023</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
+        <div>
+          <div class="cert-name">Product Manager</div>
+          <div class="cert-meta">CoderHouse · 2022</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
+        <div>
+          <div class="cert-name">Product Owner</div>
+          <div class="cert-meta">Educación IT · 2023</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+        <div>
+          <div class="cert-name">Registered Scrum Master™</div>
+          <div class="cert-meta">Scrum Inc · 2023</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
+        <div>
+          <div class="cert-name" data-es="Metodologías Ágiles" data-en="Agile Methodologies">Metodologías Ágiles</div>
+          <div class="cert-meta">CoderHouse · 2022</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
+        <div>
+          <div class="cert-name" data-es="Gestión Ágil de Proyectos" data-en="Agile Project Management">Gestión Ágil de Proyectos</div>
+          <div class="cert-meta">Crehana · 2022</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z"/></svg></div>
+        <div>
+          <div class="cert-name">Stakeholder Management</div>
+          <div class="cert-meta">Crehana · 2022</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div>
+          <div class="cert-name" data-es="Automatización y Agentes IA con n8n" data-en="Automation & AI Agents with n8n">Automatización y Agentes IA con n8n</div>
+          <div class="cert-meta">Educación IT · 2026</div>
+        </div>
+      </div>
       <div class="cert">
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4l7 4z"/></svg></div>
         <div>
@@ -1214,62 +1308,6 @@
         <div>
           <div class="cert-name" data-es="SAP FI — Desde Cero y Completo" data-en="SAP FI — Complete from Scratch">SAP FI — Desde Cero y Completo</div>
           <div class="cert-meta">2025</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <div>
-          <div class="cert-name" data-es="Automatización y Agentes IA con n8n" data-en="Automation & AI Agents with n8n">Automatización y Agentes IA con n8n</div>
-          <div class="cert-meta">Educación IT · 2026</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
-        <div>
-          <div class="cert-name">Registered Product Owner™</div>
-          <div class="cert-meta">Scrum Inc · 2024</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
-        <div>
-          <div class="cert-name">Registered Scrum Master™</div>
-          <div class="cert-meta">Scrum Inc · 2024</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
-        <div>
-          <div class="cert-name">Product Owner</div>
-          <div class="cert-meta">Educación IT · 2023</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
-        <div>
-          <div class="cert-name">Product Manager</div>
-          <div class="cert-meta">CoderHouse · 2022</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
-        <div>
-          <div class="cert-name" data-es="Metodologías Ágiles" data-en="Agile Methodologies">Metodologías Ágiles</div>
-          <div class="cert-meta">CoderHouse · 2022</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z"/></svg></div>
-        <div>
-          <div class="cert-name">Stakeholder Management</div>
-          <div class="cert-meta">Crehana · 2022</div>
-        </div>
-      </div>
-      <div class="cert">
-        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-6 4l2 7l-6-4l-6 4l2-7l-6-4h7z"/></svg></div>
-        <div>
-          <div class="cert-name" data-es="Gestión Ágil de Proyectos" data-en="Agile Project Management">Gestión Ágil de Proyectos</div>
-          <div class="cert-meta">Crehana · 2022</div>
         </div>
       </div>
     </div>
@@ -1293,7 +1331,7 @@
 <section id="contacto" class="contact">
   <div class="container">
     <h2><span data-es="¿Tenés un desafío" data-en="Got a challenge">¿Tenés un desafío</span><br><em data-es="por resolver?" data-en="to solve?">por resolver?</em></h2>
-    <p data-es="Estoy abierta a oportunidades como Analista Funcional SAP, Business Analyst, Project Manager o Product Owner, en implementación, soporte funcional y mejora de procesos. También a colaboraciones freelance y consultoría." data-en="I'm open to opportunities as an SAP Functional Analyst, Business Analyst, Project Manager or Product Owner, in implementation, functional support and process improvement. Also available for freelance collaborations and consulting.">Estoy abierta a oportunidades como Analista Funcional SAP, Business Analyst, Project Manager o Product Owner, en implementación, soporte funcional y mejora de procesos. También a colaboraciones freelance y consultoría.</p>
+    <p data-es="Busco sumarme a un equipo de producto como Product Manager o Product Owner. También estoy abierta a roles de Business Analyst, Project Manager y Analista Funcional, y a proyectos freelance o de consultoría." data-en="I'm looking to join a product team as a Product Manager or Product Owner. I'm also open to Business Analyst, Project Manager and Functional Analyst roles, as well as freelance or consulting projects.">Busco sumarme a un equipo de producto como Product Manager o Product Owner. También estoy abierta a roles de Business Analyst, Project Manager y Analista Funcional, y a proyectos freelance o de consultoría.</p>
 
     <div class="contact-buttons">
       <a href="mailto:carla.bogamassa@gmail.com" class="btn btn-primary">
@@ -1358,8 +1396,8 @@
     // Cambiar atributos HTML
     document.documentElement.lang = lang;
     document.title = (lang === 'es')
-      ? 'Carla Boga — Analista Funcional SAP S/4HANA'
-      : 'Carla Boga — SAP S/4HANA Functional Analyst';
+      ? 'Carla Boga — Product Manager'
+      : 'Carla Boga — Product Manager';
     // Update active button
     langOpts.forEach(opt => {
       opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);

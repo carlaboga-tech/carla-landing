@@ -805,6 +805,40 @@
     #consultoria [style*="padding: 48px"] { padding: 28px !important; }
     #consultoria [style*="border-right: 1px solid"] { border-right: none !important; border-bottom: 1px solid var(--border); }
   }
+  /* Disponibilidad, ficha, contexto y herramientas */
+  .hero-avail {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.04em;
+    color: var(--ink-dim); margin: -24px 0 36px;
+    opacity: 0; animation: fadeUp 0.8s ease forwards 0.58s;
+  }
+  .about-side { display: flex; flex-direction: column; gap: 24px; }
+  .facts { border: 1px solid var(--border); border-radius: var(--radius); padding: 4px 24px; background: var(--bg); }
+  .facts > div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .facts > div:last-child { border-bottom: none; }
+  .facts dt { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); padding-top: 2px; }
+  .facts dd { font-size: 14px; color: var(--ink); line-height: 1.5; }
+  @media (max-width: 480px) { .facts > div { grid-template-columns: 1fr; gap: 4px; } }
+  .job-context { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-dim); letter-spacing: 0.04em; margin: -10px 0 16px; }
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  @media (max-width: 720px) { .skills-grid { grid-template-columns: 1fr; } }
+  .tool-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .tool-list li { display: flex; flex-direction: column; gap: 2px; }
+  .tool-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .tool-use { font-size: 13px; color: var(--ink-muted); line-height: 1.5; }
+  /* Banda de logos */
+  .logo-band { margin: 8px 0 56px; overflow: hidden; position: relative;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .logo-track { display: flex; align-items: center; gap: 0; width: max-content; animation: slide 28s linear infinite; }
+  .logo-band:hover .logo-track { animation-play-state: paused; }
+  .logo-item { display: flex; align-items: center; gap: 10px; height: 44px; flex-shrink: 0; margin-right: 72px;
+    filter: grayscale(1); opacity: 0.6; transition: filter 0.3s ease, opacity 0.3s ease; }
+  .logo-item:hover { filter: none; opacity: 1; }
+  .logo-item img { height: 100%; width: auto; display: block; }
+  .logo-item.logo-sm { height: 34px; }
+  .logo-item span { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 18px; color: var(--ink); white-space: nowrap; }
+  @media (max-width: 720px) { .logo-item { height: 34px; margin-right: 48px; } .logo-item.logo-sm { height: 26px; } }
+  @media (prefers-reduced-motion: reduce) { .logo-track { animation: none; flex-wrap: wrap; width: auto; } }
 
   /* ========== OPCIÓN A · REFINADA ========== */
   /* Botón de contacto del menú en verde de marca */
@@ -871,6 +905,7 @@
     .hero h1 { font-size: 40px; line-height: 1.02; margin-bottom: 18px; }
     .hero-role { font-size: 21px; margin-bottom: 14px; }
     .hero-sub { font-size: 16px; margin-bottom: 24px; }
+    .hero-avail { margin: -8px 0 20px; }
     .hero-ctas { gap: 10px; }
     .hero-ctas .btn { padding: 14px 22px; }
     .marquee { margin-top: 24px; padding: 18px 0; }
@@ -945,6 +980,7 @@
         <p class="hero-sub">
           <span data-es="Más de 5 años en análisis de procesos, gestión IT e implementación de sistemas, hoy aplicados a la gestión de productos digitales." data-en="Over 5 years in process analysis, IT management and systems implementation, now applied to managing digital products.">Más de 5 años en análisis de procesos, gestión IT e implementación de sistemas, hoy aplicados a la gestión de productos digitales.</span>
         </p>
+        <p class="hero-avail" data-es="Tucumán, Argentina · Presencial, híbrido o remoto" data-en="Tucumán, Argentina · On-site, hybrid or remote">Tucumán, Argentina · Presencial, híbrido o remoto</p>
         <div class="hero-ctas">
           <a href="#contacto" class="btn btn-primary">
             <span data-es="Hablemos" data-en="Let's talk">Hablemos</span>
@@ -999,7 +1035,8 @@
           <p data-es="Desde la consultoría sumé la mirada de mercado: investigación, propuesta de valor y posicionamiento, aplicados en el lanzamiento de KOKO y en el rebranding de Sunday Money. Busco aportar esa combinación de negocio, procesos y tecnología a un equipo de producto." data-en="Through consulting I added a market perspective: research, value proposition and positioning, applied to the launch of KOKO and the rebranding of Sunday Money. I'm looking to bring that combination of business, processes and technology to a product team.">Desde la consultoría sumé la mirada de mercado: investigación, propuesta de valor y posicionamiento, aplicados en el lanzamiento de KOKO y en el rebranding de Sunday Money. Busco aportar esa combinación de negocio, procesos y tecnología a un equipo de producto.</p>
         </div>
       </div>
-      <div class="stats reveal">
+      <div class="about-side reveal">
+      <div class="stats">
         <div class="stat">
           <div class="stat-num">5<span class="plus">+</span></div>
           <div class="stat-label" data-es="Años en análisis de procesos y gestión IT" data-en="Years in process analysis and IT management">Años en análisis de procesos y gestión IT</div>
@@ -1017,6 +1054,14 @@
           <div class="stat-label" data-es="Certificaciones en producto, agilidad y SAP" data-en="Certifications in product, agile and SAP">Certificaciones en producto, agilidad y SAP</div>
         </div>
       </div>
+      <dl class="facts">
+        <div><dt data-es="Base" data-en="Location">Base</dt><dd data-es="San Miguel de Tucumán, Argentina" data-en="San Miguel de Tucumán, Argentina">San Miguel de Tucumán, Argentina</dd></div>
+        <div><dt data-es="Modalidad" data-en="Work mode">Modalidad</dt><dd data-es="Presencial o híbrida en Tucumán · Remota para cualquier lugar" data-en="On-site or hybrid in Tucumán · Remote anywhere">Presencial o híbrida en Tucumán · Remota para cualquier lugar</dd></div>
+        <div><dt data-es="Idiomas" data-en="Languages">Idiomas</dt><dd data-es="Español nativo · Inglés B1 · Portugués A2" data-en="Spanish (native) · English B1 · Portuguese A2">Español nativo · Inglés B1 · Portugués A2</dd></div>
+        <div><dt data-es="Formación" data-en="Education">Formación</dt><dd data-es="Lic. en Administración de Empresas (UNT, 2017)" data-en="BA in Business Administration (UNT, 2017)">Lic. en Administración de Empresas (UNT, 2017)</dd></div>
+      </dl>
+      </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1029,13 +1074,34 @@
       <h2 class="section-title"><span data-es="Una trayectoria que va de la " data-en="A career path going from ">Una trayectoria que va de la </span><em data-es="operación" data-en="operations">operación</em><span data-es=" al producto." data-en=" to product."> al producto.</span></h2>
     </div>
 
+<div class="logo-band reveal" aria-label="Empresas y clientes">
+      <div class="logo-track">
+        <div class="logo-item"><img src="logos/sven.png" alt="SVEN Consultora" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/alkemia.png" alt="Alkemia" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/uniber.png" alt="Grupo Uniber" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/recupero.png" alt="Recupero Crediticio" loading="lazy"></div>
+        <div class="logo-item logo-sm"><img src="logos/alumbra.png" alt="Programa Alumbra, Fundación Banco Macro" loading="lazy"></div>
+        <div class="logo-item logo-sm"><img src="logos/sunday.png" alt="" width="224" height="126" loading="lazy"><span>Sunday Money</span></div>
+        <!-- duplicado para el loop -->
+        <div class="logo-dup" style="display:contents" aria-hidden="true">
+        <div class="logo-item"><img src="logos/sven.png" alt="" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/alkemia.png" alt="" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/uniber.png" alt="" loading="lazy"></div>
+        <div class="logo-item"><img src="logos/recupero.png" alt="" loading="lazy"></div>
+        <div class="logo-item logo-sm"><img src="logos/alumbra.png" alt="" loading="lazy"></div>
+        <div class="logo-item logo-sm"><img src="logos/sunday.png" alt="" width="224" height="126" loading="lazy"><span>Sunday Money</span></div>
+        </div>
+      </div>
+    </div>
+
     <div class="timeline">
       <div class="job reveal">
         <div class="job-date" data-es="FEB 2026 — ACTUALIDAD" data-en="FEB 2026 — PRESENT">FEB 2026 — ACTUALIDAD</div>
         <div>
           <h3 class="job-role">Product Manager</h3>
           <div class="job-company">SVEN Consultora</div>
-          <p class="job-desc" data-es="Gestión de productos digitales y proyectos de consultoría en un equipo de 5 personas, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO." data-en="Management of digital products and consulting projects in a five-person team, from analyzing business needs to defining and delivering solutions. I lead discovery and functional definition of a web platform in development: user flows, Figma mockups, user stories and acceptance criteria. We also build Power BI dashboards and end-to-end brand and launch projects, such as KOKO.">Gestión de productos digitales y proyectos de consultoría en un equipo de 5 personas, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO.</p>
+          <div class="job-context" data-es="Equipo de 5 personas" data-en="5-person team">Equipo de 5 personas</div>
+          <p class="job-desc" data-es="Gestión de productos digitales y proyectos de consultoría, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO." data-en="Management of digital products and consulting projects, from analyzing business needs to defining and delivering solutions. I lead discovery and functional definition of a web platform in development: user flows, Figma mockups, user stories and acceptance criteria. We also build Power BI dashboards and end-to-end brand and launch projects, such as KOKO.">Gestión de productos digitales y proyectos de consultoría, desde el análisis de las necesidades del negocio hasta la definición y ejecución de soluciones. Lidero el discovery y la definición funcional de una plataforma web en desarrollo: flujos, mockups en Figma, historias de usuario y criterios de aceptación. También desarrollamos tableros de control en Power BI y proyectos integrales de marca y puesta en marcha, como KOKO.</p>
           <div class="job-tags">
             <span class="tag">Product Discovery</span>
             <span class="tag" data-es="Historias de usuario" data-en="User stories">Historias de usuario</span>
@@ -1051,6 +1117,7 @@
         <div>
           <h3 class="job-role">Business Analyst — Creatio CRM</h3>
           <div class="job-company">Alkemia LLC</div>
+          <div class="job-context" data-es="Empresa de hasta 50 personas" data-en="Company of up to 50 people">Empresa de hasta 50 personas</div>
           <p class="job-desc" data-es="Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders en proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, para alinear las necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación." data-en="Gathering and analysis of functional requirements with users and stakeholders on Creatio CRM projects. Documentation of requirements, processes and business rules to align client needs with technical teams. Functional validation of configurations and developments during implementation.">Relevamiento y análisis de requerimientos funcionales con usuarios y stakeholders en proyectos sobre Creatio CRM. Documentación de requerimientos, procesos y reglas de negocio, para alinear las necesidades del cliente con los equipos técnicos. Validación funcional de configuraciones y desarrollos durante la implementación.</p>
           <div class="job-tags">
             <span class="tag">Creatio CRM</span>
@@ -1067,7 +1134,8 @@
         <div>
           <h3 class="job-role" data-es="Analista Funcional SAP S/4HANA — MM · WM · IM" data-en="SAP S/4HANA Functional Analyst — MM · WM · IM">Analista Funcional SAP S/4HANA — MM · WM · IM</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Implementación de SAP S/4HANA con la metodología SAP Activate para unos 150 usuarios (1 sociedad, 2 sucursales y 2 depósitos), con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live." data-en="SAP S/4HANA implementation using the SAP Activate methodology for about 150 users (1 company code, 2 branches and 2 warehouses), covering MM, WM, SD and FI/CO. My functional focus: MM, WM and IM. As-Is analysis, To-Be design, functional configuration, FI integration, end-to-end UAT and post go-live support.">Implementación de SAP S/4HANA con la metodología SAP Activate para unos 150 usuarios (1 sociedad, 2 sucursales y 2 depósitos), con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live.</p>
+          <div class="job-context" data-es="Empresa de más de 500 empleados · ~150 usuarios de SAP" data-en="500+ employees · ~150 SAP users">Empresa de más de 500 empleados · ~150 usuarios de SAP</div>
+          <p class="job-desc" data-es="Implementación de SAP S/4HANA con la metodología SAP Activate para 1 sociedad, 2 sucursales y 2 depósitos, con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live." data-en="SAP S/4HANA implementation using the SAP Activate methodology for 1 company code, 2 branches and 2 warehouses, covering MM, WM, SD and FI/CO. My functional focus: MM, WM and IM. As-Is analysis, To-Be design, functional configuration, FI integration, end-to-end UAT and post go-live support.">Implementación de SAP S/4HANA con la metodología SAP Activate para 1 sociedad, 2 sucursales y 2 depósitos, con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live.</p>
           <div class="job-tags">
             <span class="tag">SAP S/4HANA</span>
             <span class="tag">SAP Activate</span>
@@ -1085,7 +1153,8 @@
         <div>
           <h3 class="job-role" data-es="IT Project Manager — Gestión de la demanda IT" data-en="IT Project Manager — IT Demand Management">IT Project Manager — Gestión de la demanda IT</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de unos 5 proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción." data-en="Identified technology needs across business areas and translated them into requirements. Prioritized demand by value and impact, and coordinated about 5 IT vendors, each with its own backlog, together with business areas and technical teams through production rollout.">Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de unos 5 proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción.</p>
+          <div class="job-context" data-es="Empresa de más de 500 empleados · 5 proveedores IT" data-en="500+ employees · 5 IT vendors">Empresa de más de 500 empleados · 5 proveedores IT</div>
+          <p class="job-desc" data-es="Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción." data-en="Identified technology needs across business areas and translated them into requirements. Prioritized demand by value and impact, and coordinated the IT vendors, each with its own backlog, together with business areas and technical teams through production rollout.">Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción.</p>
           <div class="job-tags">
             <span class="tag">Project Management</span>
             <span class="tag">Stakeholder Management</span>
@@ -1100,7 +1169,8 @@
         <div>
           <h3 class="job-role" data-es="Jefa de Control de Operaciones" data-en="Operations Control Manager">Jefa de Control de Operaciones</h3>
           <div class="job-company">Uniber</div>
-          <p class="job-desc" data-es="Liderazgo de un equipo de 9 analistas a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores." data-en="Led a team of 9 analysts in charge of procurement, payments and billing processes. Reorganized processes to strengthen controls: more supplier payments made on time and in full without losing early-payment discounts, and fewer incidents from pricing errors or defective goods. Designed KPI dashboards.">Liderazgo de un equipo de 9 analistas a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores.</p>
+          <div class="job-context" data-es="Empresa de más de 500 empleados · Equipo de 9 analistas" data-en="500+ employees · Team of 9 analysts">Empresa de más de 500 empleados · Equipo de 9 analistas</div>
+          <p class="job-desc" data-es="Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores." data-en="Led the team in charge of procurement, payments and billing processes. Reorganized processes to strengthen controls: more supplier payments made on time and in full without losing early-payment discounts, and fewer incidents from pricing errors or defective goods. Designed KPI dashboards.">Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores.</p>
           <div class="job-tags">
             <span class="tag" data-es="Liderazgo" data-en="Leadership">Liderazgo</span>
             <span class="tag">Procure-to-Pay</span>
@@ -1115,11 +1185,24 @@
         <div>
           <h3 class="job-role" data-es="Jefa de Operaciones — PMO" data-en="Operations Manager — PMO">Jefa de Operaciones — PMO</h3>
           <div class="job-company">Recupero Crediticio</div>
-          <p class="job-desc" data-es="Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño." data-en="Coordinated operations teams dedicated to collections and recovery campaigns. Built commercial and financial reports. Defined recovery strategies and performance indicators.">Coordinación de equipos operativos dedicados a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño.</p>
+          <div class="job-context" data-es="Empresa de más de 200 empleados · Equipo de 16 asesores" data-en="200+ employees · Team of 16 agents">Empresa de más de 200 empleados · Equipo de 16 asesores</div>
+          <p class="job-desc" data-es="Coordinación del equipo de asesores dedicado a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño." data-en="Coordinated the team of agents working on collections and recovery campaigns. Built commercial and financial reports. Defined recovery strategies and performance indicators.">Coordinación del equipo de asesores dedicado a cobranzas y campañas de recupero. Elaboración de reportes comerciales y financieros. Definición de estrategias de recupero e indicadores de desempeño.</p>
           <div class="job-tags">
             <span class="tag">PMO</span>
             <span class="tag">Reporting</span>
             <span class="tag" data-es="Gestión de equipos" data-en="Team management">Gestión de equipos</span>
+          </div>
+        </div>
+      </div>
+      <div class="job reveal">
+        <div class="job-date" data-es="JUL 2017 — ABR 2019" data-en="JUL 2017 — APR 2019">JUL 2017 — ABR 2019</div>
+        <div>
+          <h3 class="job-role" data-es="Asesora Comercial → Asesora de Riesgo" data-en="Sales Advisor → Risk Advisor">Asesora Comercial → Asesora de Riesgo</h3>
+          <div class="job-company" data-es="Fundación Banco Macro · Programa Alumbra" data-en="Banco Macro Foundation · Alumbra Program">Fundación Banco Macro · Programa Alumbra</div>
+          <div class="job-context" data-es="Microcréditos para emprendedores en Tucumán, Salta y Jujuy" data-en="Microloans for entrepreneurs in Tucumán, Salta and Jujuy">Microcréditos para emprendedores en Tucumán, Salta y Jujuy</div>
+          <p class="job-desc" data-es="Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera llegó a unos 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial." data-en="I joined as a sales advisor and six months later moved, through an internal competition, to risk advisor for the Tucumán branch. I managed financial products and carried out risk, profitability and portfolio monitoring analysis. The branch team exceeded 100 clients in ten months, while the other provinces took more than a year. Within a year and a half, the portfolio reached about 150 clients, with a delinquency rate of around 8%, below average. I also sat on the committees that granted funding to early-stage projects and business ideas.">Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera llegó a unos 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial.</p>
+          <div class="job-tags">
+            <span class="tag" data-es="Análisis de riesgo" data-en="Risk analysis">Análisis de riesgo</span><span class="tag" data-es="Gestión de carteras" data-en="Portfolio management">Gestión de carteras</span><span class="tag" data-es="Productos financieros" data-en="Financial products">Productos financieros</span><span class="tag" data-es="Comités de crédito" data-en="Credit committees">Comités de crédito</span>
           </div>
         </div>
       </div>
@@ -1177,23 +1260,23 @@
           </div>
           <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">KOKO</h3>
           <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;" data-es="Del naming a la apertura del local · SVEN Consultora" data-en="From naming to store opening · SVEN Consultora">Del naming a la apertura del local · SVEN Consultora</p>
-          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán. Lideré el proyecto junto al equipo de SVEN desde la idea inicial: investigación de mercado, naming, tagline, personaje, identidad visual, manual de marca, packaging, uniformes del personal y montaje del local, inaugurado a fines de agosto de 2026." data-en="End-to-end creation of a new coffee, frozen yogurt and soft-serve brand in downtown San Miguel de Tucumán. I led the project with the SVEN team from the initial idea: market research, naming, tagline, mascot, visual identity, brand guidelines, packaging, staff uniforms and store setup, which opened in late August 2026.">Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán. Lideré el proyecto junto al equipo de SVEN desde la idea inicial: investigación de mercado, naming, tagline, personaje, identidad visual, manual de marca, packaging, uniformes del personal y montaje del local, inaugurado a fines de agosto de 2026.</p>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán, en una cuadra con varios competidores consolidados." data-en="End-to-end creation of a new coffee, frozen yogurt and soft-serve brand in downtown San Miguel de Tucumán, on a block with several established competitors.">Creación integral de una nueva marca de café, yogurt helado y helado soft en el centro de San Miguel de Tucumán, en una cuadra con varios competidores consolidados.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="tag" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span><span class="tag">Naming</span><span class="tag">Branding</span><span class="tag" data-es="Manual de marca" data-en="Brand guidelines">Manual de marca</span><span class="tag">Packaging</span><span class="tag" data-es="Lanzamiento" data-en="Launch">Lanzamiento</span>
           </div>
         </div>
         <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Investigación" data-en="Research">Investigación</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Relevamiento de campo de 44 establecimientos del corredor gastronómico del centro: panorama competitivo, precios y patrones de consumo por horario." data-en="Field survey of 44 businesses in the downtown food corridor: competitive landscape, pricing and consumption patterns by time of day.">Relevamiento de campo de 44 establecimientos del corredor gastronómico del centro: panorama competitivo, precios y patrones de consumo por horario.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Para quién" data-en="Who it's for">Para quién</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Familias en primer lugar, y también personas solas o en pareja que buscan un café, un helado o un yogurt helado." data-en="Families first, as well as individuals and couples looking for coffee, ice cream or frozen yogurt.">Familias en primer lugar, y también personas solas o en pareja que buscan un café, un helado o un yogurt helado.</p>
           </div>
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Identidad de marca" data-en="Brand identity">Identidad de marca</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Definición de nombre, tagline, personaje, paleta cromática y tipografía, documentados en un manual de identidad corporativa." data-en="Definition of name, tagline, mascot, color palette and typography, documented in a corporate identity manual.">Definición de nombre, tagline, personaje, paleta cromática y tipografía, documentados en un manual de identidad corporativa.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Cómo lo trabajé" data-en="How I approached it">Cómo lo trabajé</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Lideré el proyecto completo: investigación de mercado, con un relevamiento de 44 locales de la zona, naming y branding. Coordiné el trabajo de un diseñador para la parte gráfica y la papelería." data-en="I led the full project: market research, including a survey of 44 businesses in the area, naming and branding. I coordinated a designer for the graphic work and stationery.">Lideré el proyecto completo: investigación de mercado, con un relevamiento de 44 locales de la zona, naming y branding. Coordiné el trabajo de un diseñador para la parte gráfica y la papelería.</p>
           </div>
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Puesta en marcha" data-en="Rollout">Puesta en marcha</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Aplicación de la marca en packaging (vasos, conos, bolsas y stickers), uniformes del personal y montaje del local desde cero." data-en="Brand rollout across packaging (cups, cones, bags and stickers), staff uniforms and setting up the store from scratch.">Aplicación de la marca en packaging (vasos, conos, bolsas y stickers), uniformes del personal y montaje del local desde cero.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Qué entregué" data-en="What I delivered">Qué entregué</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Manual de marca, que incluye el diseño del packaging (vasos, conos, bolsas y stickers) y de los uniformes del personal, y el montaje del local, inaugurado a fines de agosto de 2026." data-en="Brand guidelines, including the design of the packaging (cups, cones, bags and stickers) and staff uniforms, plus the store setup, which opened in late August 2026.">Manual de marca, que incluye el diseño del packaging (vasos, conos, bolsas y stickers) y de los uniformes del personal, y el montaje del local, inaugurado a fines de agosto de 2026.</p>
           </div>
         </div>
       </div>
@@ -1207,24 +1290,24 @@
             <span style="font-size: 11px; color: var(--ink-dim); border: 1px solid var(--border); padding: 4px 10px; border-radius: 100px; font-family: 'JetBrains Mono', monospace;">Fintech · 2022–2024</span>
           </div>
           <h3 style="font-family: 'Fraunces', serif; font-size: 36px; font-weight: 400; color: var(--ink); margin-bottom: 8px; line-height: 1.1;">Sunday Money</h3>
-          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;" data-es="De asesora de marketing a directora del equipo" data-en="From marketing advisor to team lead">De asesora de marketing a directora del equipo</p>
-          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Ingresé como asesora de marketing en una fintech con identidad difusa. A partir de una investigación de mercado integral, identifiqué que el problema era de posicionamiento, no de comunicación. Presenté la recomendación al directorio, lideré el proceso de rebranding y asumí la dirección del equipo de marketing interno." data-en="I joined a fintech with a blurred identity as a marketing advisor. Through comprehensive market research, I found the problem was positioning, not communication. I presented the recommendation to the board, led the rebranding process and took over leadership of the in-house marketing team.">Ingresé como asesora de marketing en una fintech con identidad difusa. A partir de una investigación de mercado integral, identifiqué que el problema era de posicionamiento, no de comunicación. Presenté la recomendación al directorio, lideré el proceso de rebranding y asumí la dirección del equipo de marketing interno.</p>
+          <p style="font-size: 13px; color: var(--ink-dim); margin-bottom: 24px; font-style: italic;" data-es="De consultora independiente a directora del equipo de marketing" data-en="From independent consultant to marketing team lead">De consultora independiente a directora del equipo de marketing</p>
+          <p style="font-size: 15px; color: var(--ink-muted); line-height: 1.8; margin-bottom: 28px;" data-es="Fintech de préstamos para personas y empresas. Ingresé como consultora independiente cuando la marca necesitaba redefinir su identidad y su posicionamiento. Presenté la recomendación al directorio, que la aprobó, lideré el rebranding y asumí la dirección del equipo de marketing interno." data-en="A lending fintech for individuals and businesses. I joined as an independent consultant when the brand needed to redefine its identity and positioning. I presented the recommendation to the board, which approved it, led the rebranding and took over leadership of the in-house marketing team.">Fintech de préstamos para personas y empresas. Ingresé como consultora independiente cuando la marca necesitaba redefinir su identidad y su posicionamiento. Presenté la recomendación al directorio, que la aprobó, lideré el rebranding y asumí la dirección del equipo de marketing interno.</p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px;">
             <span class="tag" data-es="Investigación de mercado" data-en="Market research">Investigación de mercado</span><span class="tag">Rebranding</span><span class="tag" data-es="Estrategia de negocio" data-en="Business strategy">Estrategia de negocio</span><span class="tag" data-es="Dirección de equipo" data-en="Team leadership">Dirección de equipo</span><span class="tag">Product Marketing</span>
           </div>
         </div>
         <div style="padding: 48px; display: flex; flex-direction: column; gap: 24px;">
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Diagnóstico" data-en="Diagnosis">Diagnóstico</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Investigación del ecosistema fintech: análisis competitivo, segmentación de usuarios y detección de brechas de posicionamiento." data-en="Research of the fintech ecosystem: competitive analysis, user segmentation and identification of positioning gaps.">Investigación del ecosistema fintech: análisis competitivo, segmentación de usuarios y detección de brechas de posicionamiento.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Para quién" data-en="Who it's for">Para quién</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Personas y empresas que necesitan financiamiento." data-en="Individuals and businesses that need financing.">Personas y empresas que necesitan financiamiento.</p>
           </div>
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Decisión estratégica" data-en="Strategic decision">Decisión estratégica</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Presentación al directorio con recomendación de rebranding integral. La propuesta fue aprobada e inició un proceso de transformación de seis meses." data-en="Board presentation recommending a full rebrand. The proposal was approved and kicked off a six-month transformation.">Presentación al directorio con recomendación de rebranding integral. La propuesta fue aprobada e inició un proceso de transformación de seis meses.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Cómo lo trabajé" data-en="How I approached it">Cómo lo trabajé</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Investigación del ecosistema fintech y análisis competitivo, encuestas anónimas y en la calle, y pruebas preliminares para validar el nuevo posicionamiento. Dirigí al equipo interno, un analista y un diseñador, en campañas, SEO, contenidos y redes." data-en="Research of the fintech ecosystem and competitive analysis, anonymous and street surveys, and preliminary tests to validate the new positioning. I led the in-house team, an analyst and a designer, on campaigns, SEO, content and social media.">Investigación del ecosistema fintech y análisis competitivo, encuestas anónimas y en la calle, y pruebas preliminares para validar el nuevo posicionamiento. Dirigí al equipo interno, un analista y un diseñador, en campañas, SEO, contenidos y redes.</p>
           </div>
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Liderazgo del equipo" data-en="Team leadership">Liderazgo del equipo</p>
-            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Dirección del equipo de marketing interno, integrado por un analista y un diseñador. Campañas, SEO, contenidos, redes y medición con Google Analytics." data-en="Led the in-house marketing team of one analyst and one designer. Campaigns, SEO, content, social media and measurement with Google Analytics.">Dirección del equipo de marketing interno, integrado por un analista y un diseñador. Campañas, SEO, contenidos, redes y medición con Google Analytics.</p>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Qué entregué" data-en="What I delivered">Qué entregué</p>
+            <p style="font-size: 14px; color: var(--ink-muted); line-height: 1.7;" data-es="Informes mensuales sobre el desempeño en redes, las acciones realizadas y el presupuesto utilizado; un informe con los resultados de las encuestas y recomendaciones; y los requerimientos y las pruebas de la nueva web, desarrollada por un proveedor externo." data-en="Monthly reports on social media performance, actions taken and budget used; a report with survey results and recommendations; and the requirements and testing for the new website, built by an external vendor.">Informes mensuales sobre el desempeño en redes, las acciones realizadas y el presupuesto utilizado; un informe con los resultados de las encuestas y recomendaciones; y los requerimientos y las pruebas de la nueva web, desarrollada por un proveedor externo.</p>
           </div>
           <div style="border-left: 2px solid var(--border); padding-left: 20px;">
             <p style="font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px;" data-es="Resultado" data-en="Outcome">Resultado</p>
@@ -1281,7 +1364,7 @@
       <div class="project reveal">
         <div class="project-year">2023 — 2025</div>
         <h3 class="project-title" data-es="Implementación SAP S/4HANA" data-en="SAP S/4HANA Implementation">Implementación SAP S/4HANA</h3>
-        <p class="project-desc" data-es="Implementación de punta a punta con la metodología SAP Activate para unos 150 usuarios, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización." data-en="End-to-end implementation using the SAP Activate methodology for about 150 users, covering MM, WM, SD and FI/CO. Functional analysis, MM, WM and IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación de punta a punta con la metodología SAP Activate para unos 150 usuarios, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización.</p>
+        <p class="project-desc" data-es="Implementación de punta a punta con la metodología SAP Activate, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización." data-en="End-to-end implementation using the SAP Activate methodology, covering MM, WM, SD and FI/CO. Functional analysis, MM, WM and IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación de punta a punta con la metodología SAP Activate, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización.</p>
         <div class="project-stack">
           <span class="tag">S/4HANA</span>
           <span class="tag">SAP Activate</span>
@@ -1330,68 +1413,48 @@
           <span>Scrum</span>
           <span>SAP Activate</span>
           <span>BPMN</span>
-          <span data-es="As-Is / To-Be" data-en="As-Is / To-Be">As-Is / To-Be</span>
+          <span>As-Is / To-Be</span>
         </div>
       </div>
 
       <div class="skill-cat">
-        <div class="skill-cat-title">SAP</div>
-        <div class="skill-list">
-          <span>S/4HANA — MM · WM · IM</span>
-          <span data-es="SAP Query e Infosets" data-en="SAP Query and Infosets">SAP Query e Infosets</span>
-          <span data-es="Debugging ABAP (SE38)" data-en="ABAP debugging (SE38)">Debugging ABAP (SE38)</span>
-        </div>
-      </div>
-
-      <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Otros ERP y CRM" data-en="Other ERP and CRM">Otros ERP y CRM</div>
-        <div class="skill-list">
-          <span>Creatio CRM</span>
-          <span>Finnegans</span>
-          <span>Emerix</span>
-        </div>
+        <div class="skill-cat-title" data-es="ERP y CRM" data-en="ERP and CRM">ERP y CRM</div>
+        <ul class="tool-list">
+          <li><span class="tool-name">SAP S/4HANA (MM · WM · IM)</span><span class="tool-use" data-es="Configuración y validación funcional de compras, inventarios y depósitos." data-en="Functional configuration and validation of procurement, inventory and warehouses.">Configuración y validación funcional de compras, inventarios y depósitos.</span></li>
+          <li><span class="tool-name">SAP Query e Infosets</span><span class="tool-use" data-es="Reportes a medida dentro de SAP." data-en="Custom reports within SAP.">Reportes a medida dentro de SAP.</span></li>
+          <li><span class="tool-name">Debugging ABAP (SE38)</span><span class="tool-use" data-es="Análisis de errores junto al equipo técnico." data-en="Error analysis with the technical team.">Análisis de errores junto al equipo técnico.</span></li>
+          <li><span class="tool-name">Creatio CRM</span><span class="tool-use" data-es="Diseño funcional de procesos y automatizaciones sin código." data-en="Functional design of processes and no-code automations.">Diseño funcional de procesos y automatizaciones sin código.</span></li>
+          <li><span class="tool-name" data-es="Finnegans y Emerix" data-en="Finnegans and Emerix">Finnegans y Emerix</span><span class="tool-use" data-es="Extracción de información de gestión en sistemas de clientes." data-en="Extracting management information from client systems.">Extracción de información de gestión en sistemas de clientes.</span></li>
+        </ul>
       </div>
 
       <div class="skill-cat">
         <div class="skill-cat-title" data-es="Gestión de proyectos y tickets" data-en="Project and ticket management">Gestión de proyectos y tickets</div>
-        <div class="skill-list">
-          <span>Jira</span>
-          <span>Asana</span>
-          <span>Trello</span>
-          <span>Redmine</span>
-          <span>Mantis</span>
-          <span>Zendesk</span>
-        </div>
+        <ul class="tool-list">
+          <li><span class="tool-name">Jira</span><span class="tool-use" data-es="Gestión del backlog y seguimiento de entregas con equipos técnicos." data-en="Backlog management and delivery tracking with technical teams.">Gestión del backlog y seguimiento de entregas con equipos técnicos.</span></li>
+          <li><span class="tool-name" data-es="Asana y Trello" data-en="Asana and Trello">Asana y Trello</span><span class="tool-use" data-es="Proyectos internos, chicos o de corto alcance." data-en="Internal, small or short-term projects.">Proyectos internos, chicos o de corto alcance.</span></li>
+          <li><span class="tool-name" data-es="Redmine, Mantis y Zendesk" data-en="Redmine, Mantis and Zendesk">Redmine, Mantis y Zendesk</span><span class="tool-use" data-es="Seguimiento de incidencias y requerimientos con proveedores IT." data-en="Tracking incidents and requirements with IT vendors.">Seguimiento de incidencias y requerimientos con proveedores IT.</span></li>
+        </ul>
       </div>
 
       <div class="skill-cat">
         <div class="skill-cat-title" data-es="Diseño y colaboración" data-en="Design and collaboration">Diseño y colaboración</div>
-        <div class="skill-list">
-          <span>Figma</span>
-          <span>Miro</span>
-          <span>Mural</span>
-          <span>Microsoft Teams</span>
-        </div>
+        <ul class="tool-list">
+          <li><span class="tool-name">Figma</span><span class="tool-use" data-es="Flujos y mockups para validar con usuarios." data-en="User flows and mockups to validate with users.">Flujos y mockups para validar con usuarios.</span></li>
+          <li><span class="tool-name" data-es="Mural y Miro" data-en="Mural and Miro">Mural y Miro</span><span class="tool-use" data-es="Talleres y relevamientos con clientes." data-en="Workshops and discovery sessions with clients.">Talleres y relevamientos con clientes.</span></li>
+          <li><span class="tool-name">Microsoft Teams</span><span class="tool-use" data-es="Coordinación con áreas y proveedores." data-en="Coordination with business areas and vendors.">Coordinación con áreas y proveedores.</span></li>
+        </ul>
       </div>
 
       <div class="skill-cat">
         <div class="skill-cat-title" data-es="Datos y automatización" data-en="Data and automation">Datos y automatización</div>
-        <div class="skill-list">
-          <span>Power BI</span>
-          <span>Google Analytics</span>
-          <span>SQL</span>
-          <span data-es="Excel avanzado" data-en="Advanced Excel">Excel avanzado</span>
-          <span>n8n</span>
-        </div>
-      </div>
-
-      <div class="skill-cat">
-        <div class="skill-cat-title" data-es="Idiomas" data-en="Languages">Idiomas</div>
-        <div class="skill-list">
-          <span data-es="Español — Nativo" data-en="Spanish — Native">Español — Nativo</span>
-          <span data-es="Inglés — Lectura y escritura intermedias, conversación básica" data-en="English — Intermediate reading and writing, basic conversation">Inglés — Lectura y escritura intermedias, conversación básica</span>
-          <span data-es="Portugués — Básico" data-en="Portuguese — Basic">Portugués — Básico</span>
-        </div>
+        <ul class="tool-list">
+          <li><span class="tool-name">Power BI</span><span class="tool-use" data-es="Tableros de control para clientes." data-en="Dashboards for clients.">Tableros de control para clientes.</span></li>
+          <li><span class="tool-name">Google Analytics</span><span class="tool-use" data-es="Medición del comportamiento de los usuarios en la web." data-en="Measuring user behavior on the website.">Medición del comportamiento de los usuarios en la web.</span></li>
+          <li><span class="tool-name">SQL</span><span class="tool-use" data-es="Pruebas y análisis de bugs reportados." data-en="Testing and analysis of reported bugs.">Pruebas y análisis de bugs reportados.</span></li>
+          <li><span class="tool-name">Excel avanzado</span><span class="tool-use" data-es="Análisis y tableros de indicadores." data-en="Analysis and KPI dashboards.">Análisis y tableros de indicadores.</span></li>
+          <li><span class="tool-name">n8n</span><span class="tool-use" data-es="Automatización de flujos con agentes de IA." data-en="Workflow automation with AI agents.">Automatización de flujos con agentes de IA.</span></li>
+        </ul>
       </div>
     </div>
   </div>

@@ -839,6 +839,21 @@
   .logo-item span { font-family: 'Sora', sans-serif; font-weight: 600; font-size: 18px; color: var(--ink); white-space: nowrap; }
   @media (max-width: 720px) { .logo-item { height: 34px; margin-right: 48px; } .logo-item.logo-sm { height: 26px; } }
   @media (prefers-reduced-motion: reduce) { .logo-track { animation: none; flex-wrap: wrap; width: auto; } }
+  /* Empresa con varios roles y proyectos destacados */
+  .subroles { display: flex; flex-direction: column; gap: 32px; margin-top: 22px; border-left: 1px solid var(--border); padding-left: 24px; }
+  .subrole { position: relative; }
+  .subrole::before { content: ''; position: absolute; left: -29px; top: 9px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+  .subrole-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 500; line-height: 1.25; margin-bottom: 4px; }
+  .subrole-meta { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--ink-dim); letter-spacing: 0.04em; margin-bottom: 12px; }
+  .project-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; padding: 16px 18px; margin: 4px 0 16px; }
+  .project-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-bottom: 6px; }
+  .project-name { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .project-years { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); padding-top: 2px; }
+  .project-text { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+  .project-results { list-style: none; margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
+  .project-results li { font-size: 13.5px; color: var(--ink); line-height: 1.5; padding-left: 18px; position: relative; }
+  .project-results li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+  @media (max-width: 720px) { .subroles { padding-left: 18px; } .subrole::before { left: -23px; } }
 
   /* ========== OPCIÓN A · REFINADA ========== */
   /* Botón de contacto del menú en verde de marca */
@@ -1128,52 +1143,73 @@
       </div>
 
       <div class="job reveal">
-        <div class="job-date">NOV 2023 — FEB 2026</div>
+        <div class="job-date" data-es="FEB 2021 — FEB 2026" data-en="FEB 2021 — FEB 2026">FEB 2021 — FEB 2026</div>
         <div>
-          <h3 class="job-role" data-es="Analista Funcional SAP S/4HANA — MM · WM · IM" data-en="SAP S/4HANA Functional Analyst — MM · WM · IM">Analista Funcional SAP S/4HANA — MM · WM · IM</h3>
-          <div class="job-company">Uniber</div>
-          <div class="job-context" data-es="Empresa de más de 500 empleados · ~150 usuarios de SAP" data-en="500+ employees · ~150 SAP users">Empresa de más de 500 empleados · ~150 usuarios de SAP</div>
-          <p class="job-desc" data-es="Implementación de SAP S/4HANA con la metodología SAP Activate para 1 sociedad, 2 sucursales y 2 depósitos, con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live." data-en="SAP S/4HANA implementation using the SAP Activate methodology for 1 company code, 2 branches and 2 warehouses, covering MM, WM, SD and FI/CO. My functional focus: MM, WM and IM. As-Is analysis, To-Be design, functional configuration, FI integration, end-to-end UAT and post go-live support.">Implementación de SAP S/4HANA con la metodología SAP Activate para 1 sociedad, 2 sucursales y 2 depósitos, con alcance en MM, WM, SD y FI/CO. Mi foco funcional: MM, WM e IM. Relevamiento As-Is, diseño To-Be, configuración funcional, integración con FI, pruebas UAT de punta a punta y soporte posterior al go-live.</p>
-          <div class="job-tags">
-            <span class="tag">SAP S/4HANA</span>
-            <span class="tag">SAP Activate</span>
-            <span class="tag">MM · WM · IM</span>
-            <span class="tag">MRP</span>
-            <span class="tag">Debugging ABAP</span>
-            <span class="tag">Procure-to-Pay</span>
-            <span class="tag">UAT</span>
+          <h3 class="job-role">Uniber</h3>
+          <div class="job-context" style="margin-top: 4px;" data-es="Empresa de más de 500 empleados · Tres roles en cinco años" data-en="500+ employees · Three roles in five years">Empresa de más de 500 empleados · Tres roles en cinco años</div>
+          <div class="subroles">
+          <div class="subrole">
+            <h4 class="subrole-title" data-es="Analista Funcional SAP S/4HANA — MM · WM · FICO" data-en="SAP S/4HANA Functional Analyst — MM · WM · FICO">Analista Funcional SAP S/4HANA — MM · WM · FICO</h4>
+            <div class="subrole-meta" data-es="NOV 2023 — FEB 2026 · +150 usuarios de SAP" data-en="NOV 2023 — FEB 2026 · 150+ SAP users">NOV 2023 — FEB 2026 · +150 usuarios de SAP</div>
+            <p class="job-desc" data-es="Especialista en MM, con formación en WM y FI/CO, y soporte a la integración entre módulos durante y después del go-live. Nexo entre las áreas de negocio y los equipos técnicos." data-en="MM specialist, trained in WM and FI/CO, supporting cross-module integration during and after go-live. Liaison between business areas and technical teams.">Especialista en MM, con formación en WM y FI/CO, y soporte a la integración entre módulos durante y después del go-live. Nexo entre las áreas de negocio y los equipos técnicos.</p>
+            <div class="project-box">
+              <div class="project-head"><span class="project-name" data-es="Proyecto Haka · Implementación SAP S/4HANA" data-en="Project Haka · SAP S/4HANA implementation">Proyecto Haka · Implementación SAP S/4HANA</span><span class="project-years">2023 — 2025</span></div>
+              <p class="project-text" data-es="Implementación de punta a punta con SAP Activate de los módulos MM, WM, SD y FI/CO, con la migración de todos los procesos de la compañía: 1 sociedad, 2 sucursales y 2 depósitos. Relevamiento As-Is, diseño To-Be, configuración funcional y pruebas UAT." data-en="End-to-end implementation with SAP Activate of the MM, WM, SD and FI/CO modules, migrating all company processes: 1 company code, 2 branches and 2 warehouses. As-Is analysis, To-Be design, functional configuration and UAT.">Implementación de punta a punta con SAP Activate de los módulos MM, WM, SD y FI/CO, con la migración de todos los procesos de la compañía: 1 sociedad, 2 sucursales y 2 depósitos. Relevamiento As-Is, diseño To-Be, configuración funcional y pruebas UAT.</p>
+              <ul class="project-results">
+              <li data-es="Salida a producción en la fecha planificada: 1 de enero de 2025, a 14 meses del inicio." data-en="Go-live on the planned date: January 1, 2025, 14 months after kickoff.">Salida a producción en la fecha planificada: 1 de enero de 2025, a 14 meses del inicio.</li>
+              <li data-es="+150 usuarios capacitados y estabilización completa en 10 meses." data-en="150+ users trained and full stabilization within 10 months.">+150 usuarios capacitados y estabilización completa en 10 meses.</li>
+              <li data-es="Información centralizada en un único sistema en la nube, con mejor calidad de datos y de reportes, y permisos por usuario para mayor seguridad." data-en="Information centralized in a single cloud system, with better data and reporting quality, and user-level permissions for stronger security.">Información centralizada en un único sistema en la nube, con mejor calidad de datos y de reportes, y permisos por usuario para mayor seguridad.</li>
+              <li data-es="Reducción de tareas manuales y más controles sobre mercadería, precios de facturas y cajas, con trazabilidad total del negocio." data-en="Reduced manual tasks and more controls over goods, invoice prices and cash registers, with full business traceability.">Reducción de tareas manuales y más controles sobre mercadería, precios de facturas y cajas, con trazabilidad total del negocio.</li>
+              </ul>
+            </div>
+            <div class="project-box">
+              <div class="project-head"><span class="project-name" data-es="PSB · Plan de Simplificación del Back Office" data-en="PSB · Back Office Simplification Plan">PSB · Plan de Simplificación del Back Office</span><span class="project-years">2025 — 2026</span></div>
+              <p class="project-text" data-es="Rediseño de los procesos de flujo de caja y presupuesto financiero, con mesas de trabajo de +30 personas de distintas áreas y análisis de dotación por puesto." data-en="Redesign of the cash flow and financial budgeting processes, with working sessions involving 30+ people from different areas and a headcount analysis per role.">Rediseño de los procesos de flujo de caja y presupuesto financiero, con mesas de trabajo de +30 personas de distintas áreas y análisis de dotación por puesto.</p>
+              <ul class="project-results">
+              <li data-es="Reemplazo de tareas y planillas de Excel manuales por reportes automatizados, listos para descargar desde una plataforma digital, para reducir la dedicación por tarea." data-en="Manual tasks and Excel spreadsheets replaced by automated reports, ready to download from a digital platform, reducing the effort per task.">Reemplazo de tareas y planillas de Excel manuales por reportes automatizados, listos para descargar desde una plataforma digital, para reducir la dedicación por tarea.</li>
+              <li data-es="Reasignación de tareas y nuevos responsables en los puestos sobreexigidos." data-en="Tasks reassigned and new owners appointed for overloaded roles.">Reasignación de tareas y nuevos responsables en los puestos sobreexigidos.</li>
+              </ul>
+            </div>
+            <div class="job-tags"><span class="tag">SAP S/4HANA</span><span class="tag">SAP Activate</span><span class="tag">MM · WM · FICO</span><span class="tag">Procure-to-Pay</span><span class="tag">UAT</span><span class="tag">Go-Live</span></div>
           </div>
-        </div>
-      </div>
-
-      <div class="job reveal">
-        <div class="job-date" data-es="DIC 2022 — NOV 2023" data-en="DEC 2022 — NOV 2023">DIC 2022 — NOV 2023</div>
-        <div>
-          <h3 class="job-role" data-es="IT Project Manager — Gestión de la demanda IT" data-en="IT Project Manager — IT Demand Management">IT Project Manager — Gestión de la demanda IT</h3>
-          <div class="job-company">Uniber</div>
-          <div class="job-context" data-es="Empresa de más de 500 empleados · 5 proveedores IT" data-en="500+ employees · 5 IT vendors">Empresa de más de 500 empleados · 5 proveedores IT</div>
-          <p class="job-desc" data-es="Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción." data-en="Identified technology needs across business areas and translated them into requirements. Prioritized demand by value and impact, and coordinated the IT vendors, each with its own backlog, together with business areas and technical teams through production rollout.">Detección de necesidades tecnológicas de las distintas áreas del negocio y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, junto a las áreas de negocio y los equipos técnicos hasta la puesta en producción.</p>
-          <div class="job-tags">
-            <span class="tag">Project Management</span>
-            <span class="tag">Stakeholder Management</span>
-            <span class="tag">Backlog</span>
-            <span class="tag">Scrum</span>
+          <div class="subrole">
+            <h4 class="subrole-title" data-es="Project Manager IT — Gestión de la Demanda" data-en="IT Project Manager — Demand Management">Project Manager IT — Gestión de la Demanda</h4>
+            <div class="subrole-meta" data-es="DIC 2022 — NOV 2023 · 5 proveedores IT" data-en="DEC 2022 — NOV 2023 · 5 IT vendors">DIC 2022 — NOV 2023 · 5 proveedores IT</div>
+            <p class="job-desc" data-es="Detección de necesidades tecnológicas de las distintas áreas y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, hasta la puesta en producción." data-en="Identified technology needs across business areas and translated them into requirements. Prioritized demand by value and impact and coordinated the IT vendors, each with its own backlog, through production rollout.">Detección de necesidades tecnológicas de las distintas áreas y su traducción en requerimientos. Priorización de la demanda según valor e impacto, y coordinación de los proveedores IT, cada uno con su backlog, hasta la puesta en producción.</p>
+            <div class="project-box">
+              <div class="project-head"><span class="project-name" data-es="FAR · Fondos a Rendir" data-en="FAR · Expense Advances">FAR · Fondos a Rendir</span></div>
+              <p class="project-text" data-es="Workflow de aprobación en Redmine para el circuito de fondos a rendir, desde la solicitud de fondos para un viaje hasta su rendición." data-en="Approval workflow in Redmine for the expense advance process, from requesting travel funds to reporting expenses.">Workflow de aprobación en Redmine para el circuito de fondos a rendir, desde la solicitud de fondos para un viaje hasta su rendición.</p>
+              <ul class="project-results">
+              <li data-es="Reducción del papel con la digitalización de los comprobantes." data-en="Less paper through digitized receipts.">Reducción del papel con la digitalización de los comprobantes.</li>
+              <li data-es="Control de las fechas de cada solicitud, desde el pedido hasta la rendición." data-en="Date tracking for each request, from submission to expense report.">Control de las fechas de cada solicitud, desde el pedido hasta la rendición.</li>
+              </ul>
+            </div>
+            <div class="project-box">
+              <div class="project-head"><span class="project-name" data-es="Mesa de ayuda · Mejora de Redmine" data-en="Help desk · Redmine improvement">Mesa de ayuda · Mejora de Redmine</span></div>
+              <p class="project-text" data-es="Cambios en Redmine para mejorar la calidad de la información de los tickets y su derivación." data-en="Changes to Redmine to improve ticket information quality and routing.">Cambios en Redmine para mejorar la calidad de la información de los tickets y su derivación.</p>
+              <ul class="project-results">
+              <li data-es="Tickets con información más completa y mejor derivados." data-en="Tickets with more complete information and better routing.">Tickets con información más completa y mejor derivados.</li>
+              <li data-es="Reducción de los tiempos de respuesta de la mesa de ayuda en la derivación y la resolución." data-en="Shorter help desk response times for routing and resolution.">Reducción de los tiempos de respuesta de la mesa de ayuda en la derivación y la resolución.</li>
+              </ul>
+            </div>
+            <div class="job-tags"><span class="tag">Project Management</span><span class="tag">Stakeholder Management</span><span class="tag">Backlog</span><span class="tag">Scrum</span></div>
           </div>
-        </div>
-      </div>
-
-      <div class="job reveal">
-        <div class="job-date" data-es="FEB 2021 — DIC 2022" data-en="FEB 2021 — DEC 2022">FEB 2021 — DIC 2022</div>
-        <div>
-          <h3 class="job-role" data-es="Jefa de Control de Operaciones" data-en="Operations Control Manager">Jefa de Control de Operaciones</h3>
-          <div class="job-company">Uniber</div>
-          <div class="job-context" data-es="Empresa de más de 500 empleados · Equipo de 9 analistas" data-en="500+ employees · Team of 9 analysts">Empresa de más de 500 empleados · Equipo de 9 analistas</div>
-          <p class="job-desc" data-es="Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores." data-en="Led the team in charge of procurement, payments and billing processes. Reorganized processes to strengthen controls: more supplier payments made on time and in full without losing early-payment discounts, and fewer incidents from pricing errors or defective goods. Designed KPI dashboards.">Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Reorganización de procesos para fortalecer los controles: más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa. Diseño de tableros de indicadores.</p>
-          <div class="job-tags">
-            <span class="tag" data-es="Liderazgo" data-en="Leadership">Liderazgo</span>
-            <span class="tag">Procure-to-Pay</span>
-            <span class="tag">KPIs</span>
-            <span class="tag" data-es="Excel avanzado" data-en="Advanced Excel">Excel avanzado</span>
+          <div class="subrole">
+            <h4 class="subrole-title" data-es="Jefa de Control de Operaciones · Product Owner" data-en="Operations Control Manager · Product Owner">Jefa de Control de Operaciones · Product Owner</h4>
+            <div class="subrole-meta" data-es="FEB 2021 — DIC 2022 · Equipo de 9 analistas" data-en="FEB 2021 — DEC 2022 · Team of 9 analysts">FEB 2021 — DIC 2022 · Equipo de 9 analistas</div>
+            <p class="job-desc" data-es="Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa." data-en="Led the team in charge of procurement, payments and billing. More supplier payments made on time and in full without losing early-payment discounts, and fewer incidents from pricing errors or defective goods.">Liderazgo del equipo a cargo de los circuitos de compras, pagos y facturación. Más legajos pagados en tiempo y forma sin perder descuentos por pronto pago, y menos incidencias por errores de precio o mercadería defectuosa.</p>
+            <div class="project-box">
+              <div class="project-head"><span class="project-name" data-es="Legajo Digital y Portal de Proveedores, como Product Owner" data-en="Digital Records and Supplier Portal, as Product Owner">Legajo Digital y Portal de Proveedores, como Product Owner</span><span class="project-years">2021 — 2023</span></div>
+              <p class="project-text" data-es="Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago, con workflow de aprobaciones y un portal de autogestión." data-en="Digitization of the supplier payment process, from purchase order to payment order, with an approval workflow and a self-service portal.">Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago, con workflow de aprobaciones y un portal de autogestión.</p>
+              <ul class="project-results">
+              <li data-es="+100 proveedores autogestionan sus pagos en el portal: consultan sus órdenes de pago, envían sus facturas y reciben aviso por correo." data-en="100+ suppliers manage their payments on the portal: they check payment orders, submit invoices and receive email notifications.">+100 proveedores autogestionan sus pagos en el portal: consultan sus órdenes de pago, envían sus facturas y reciben aviso por correo.</li>
+              <li data-es="Canales de comunicación con proveedores unificados en el portal." data-en="Supplier communication channels unified in the portal.">Canales de comunicación con proveedores unificados en el portal.</li>
+              <li data-es="Trazabilidad del circuito, con identificación de cuellos de botella y de responsables en cada etapa." data-en="Process traceability, identifying bottlenecks and owners at each stage.">Trazabilidad del circuito, con identificación de cuellos de botella y de responsables en cada etapa.</li>
+              <li data-es="Eliminación total de los legajos en papel: el pago se gestiona desde el ingreso de la mercadería al sistema." data-en="Paper records fully eliminated: payments are processed from the moment goods are entered into the system.">Eliminación total de los legajos en papel: el pago se gestiona desde el ingreso de la mercadería al sistema.</li>
+              </ul>
+            </div>
+            <div class="job-tags"><span class="tag" data-es="Liderazgo" data-en="Leadership">Liderazgo</span><span class="tag">Product Owner</span><span class="tag">Procure-to-Pay</span><span class="tag">KPIs</span></div>
+          </div>
           </div>
         </div>
       </div>
@@ -1198,7 +1234,7 @@
           <h3 class="job-role" data-es="Asesora Comercial → Asesora de Riesgo" data-en="Sales Advisor → Risk Advisor">Asesora Comercial → Asesora de Riesgo</h3>
           <div class="job-company" data-es="Fundación Banco Macro · Programa Alumbra" data-en="Banco Macro Foundation · Alumbra Program">Fundación Banco Macro · Programa Alumbra</div>
           <div class="job-context" data-es="Microcréditos para emprendedores en Tucumán, Salta y Jujuy" data-en="Microloans for entrepreneurs in Tucumán, Salta and Jujuy">Microcréditos para emprendedores en Tucumán, Salta y Jujuy</div>
-          <p class="job-desc" data-es="Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera llegó a unos 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial." data-en="I joined as a sales advisor and six months later moved, through an internal competition, to risk advisor for the Tucumán branch. I managed financial products and carried out risk, profitability and portfolio monitoring analysis. The branch team exceeded 100 clients in ten months, while the other provinces took more than a year. Within a year and a half, the portfolio reached about 150 clients, with a delinquency rate of around 8%, below average. I also sat on the committees that granted funding to early-stage projects and business ideas.">Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera llegó a unos 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial.</p>
+          <p class="job-desc" data-es="Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera superó los 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial." data-en="I joined as a sales advisor and six months later moved, through an internal competition, to risk advisor for the Tucumán branch. I managed financial products and carried out risk, profitability and portfolio monitoring analysis. The branch team exceeded 100 clients in ten months, while the other provinces took more than a year. Within a year and a half, the portfolio exceeded 150 clients, with a delinquency rate of around 8%, below average. I also sat on the committees that granted funding to early-stage projects and business ideas.">Ingresé como asesora comercial y a los seis meses pasé por concurso interno a asesora de riesgo de la sucursal Tucumán. Gestioné productos financieros y realicé análisis de riesgo, rentabilidad y seguimiento de carteras. El equipo de la sucursal superó los 100 clientes en diez meses, mientras que las otras provincias tardaron más de un año. En un año y medio, la cartera superó los 150 clientes, con una mora cercana al 8 %, por debajo de la media. También integré los comités que otorgaban financiamiento a proyectos e ideas de negocio en etapa inicial.</p>
           <div class="job-tags">
             <span class="tag" data-es="Análisis de riesgo" data-en="Risk analysis">Análisis de riesgo</span><span class="tag" data-es="Gestión de carteras" data-en="Portfolio management">Gestión de carteras</span><span class="tag" data-es="Productos financieros" data-en="Financial products">Productos financieros</span><span class="tag" data-es="Comités de crédito" data-en="Credit committees">Comités de crédito</span>
           </div>
@@ -1338,57 +1374,11 @@
   </div>
 </section>
 
-<!-- ========== PROYECTOS ========== -->
-<section id="proyectos">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label" data-es="04 — Transformación digital" data-en="04 — Digital transformation">04 — Transformación digital</div>
-      <h2 class="section-title"><span data-es="Del relevamiento a la " data-en="From discovery to ">Del relevamiento a la </span><em data-es="puesta en producción" data-en="production">puesta en producción</em><span data-es="." data-en=".">.</span></h2>
-      <p class="section-intro" data-es="Implementación de SAP S/4HANA, simplificación del back office y digitalización del circuito de pago a proveedores." data-en="SAP S/4HANA implementation, back office simplification and digitization of the supplier payment process.">Implementación de SAP S/4HANA, simplificación del back office y digitalización del circuito de pago a proveedores.</p>
-    </div>
-
-    <div class="projects-grid">
-      <div class="project reveal">
-        <div class="project-year">2025 — 2026</div>
-        <h3 class="project-title" data-es="PSB — Plan de Simplificación del Back Office" data-en="PSB — Back Office Simplification Plan">PSB — Plan de Simplificación del Back Office</h3>
-        <p class="project-desc" data-es="Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo entre áreas para rediseñar el flujo de caja, el presupuesto y el circuito Procure-to-Pay. Análisis de dotación (FTE) por puesto." data-en="As-Is analysis and To-Be design of administrative and financial processes. Coordinated cross-functional working sessions to redesign cash flow, budgeting and Procure-to-Pay. Headcount (FTE) analysis per role.">Relevamiento As-Is y diseño To-Be de procesos administrativos y financieros. Coordinación de mesas de trabajo entre áreas para rediseñar el flujo de caja, el presupuesto y el circuito Procure-to-Pay. Análisis de dotación (FTE) por puesto.</p>
-        <div class="project-stack">
-          <span class="tag" data-es="Diseño de procesos" data-en="Process design">Diseño de procesos</span>
-          <span class="tag">As-Is / To-Be</span>
-          <span class="tag">Procure-to-Pay</span>
-        </div>
-      </div>
-
-      <div class="project reveal">
-        <div class="project-year">2023 — 2025</div>
-        <h3 class="project-title" data-es="Implementación SAP S/4HANA" data-en="SAP S/4HANA Implementation">Implementación SAP S/4HANA</h3>
-        <p class="project-desc" data-es="Implementación de punta a punta con la metodología SAP Activate, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización." data-en="End-to-end implementation using the SAP Activate methodology, covering MM, WM, SD and FI/CO. Functional analysis, MM, WM and IM configuration, To-Be design, UAT testing and support during go-live and stabilization.">Implementación de punta a punta con la metodología SAP Activate, con alcance en MM, WM, SD y FI/CO. Participación en el relevamiento funcional, la configuración de MM, WM e IM, el diseño To-Be, las pruebas UAT y el soporte durante el go-live y la estabilización.</p>
-        <div class="project-stack">
-          <span class="tag">S/4HANA</span>
-          <span class="tag">SAP Activate</span>
-          <span class="tag">Go-Live</span>
-        </div>
-      </div>
-
-      <div class="project reveal">
-        <div class="project-year">2021 — 2023</div>
-        <h3 class="project-title" data-es="Legajo Digital & Portal de Proveedores" data-en="Digital Records & Supplier Portal">Legajo Digital & Portal de Proveedores</h3>
-        <p class="project-desc" data-es="Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago. Implementación de una plataforma con workflow de aprobaciones y un portal de autogestión para proveedores." data-en="Digitization of the supplier payment process, from purchase order to payment order. Implementation of a platform with an approval workflow and a self-service supplier portal.">Digitalización del circuito de pago a proveedores, desde la orden de compra hasta la orden de pago. Implementación de una plataforma con workflow de aprobaciones y un portal de autogestión para proveedores.</p>
-        <div class="project-stack">
-          <span class="tag" data-es="Workflow de aprobaciones" data-en="Approval workflow">Workflow de aprobaciones</span>
-          <span class="tag" data-es="Digitalización" data-en="Digitization">Digitalización</span>
-          <span class="tag" data-es="Portal de proveedores" data-en="Supplier portal">Portal de proveedores</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ========== SKILLS ========== -->
 <section id="skills" class="skills">
   <div class="container">
     <div class="reveal">
-      <div class="section-label" data-es="05 — Herramientas" data-en="05 — Toolkit">05 — Herramientas</div>
+      <div class="section-label" data-es="04 — Herramientas" data-en="04 — Toolkit">04 — Herramientas</div>
       <h2 class="section-title"><span data-es="Herramientas y " data-en="Tools and ">Herramientas y </span><em data-es="metodologías" data-en="methodologies">metodologías</em><span data-es="." data-en=".">.</span></h2>
     </div>
 
@@ -1418,7 +1408,7 @@
       <div class="skill-cat">
         <div class="skill-cat-title" data-es="ERP y CRM" data-en="ERP and CRM">ERP y CRM</div>
         <ul class="tool-list">
-          <li><span class="tool-name">SAP S/4HANA (MM · WM · IM)</span><span class="tool-use" data-es="Configuración y validación funcional de compras, inventarios y depósitos." data-en="Functional configuration and validation of procurement, inventory and warehouses.">Configuración y validación funcional de compras, inventarios y depósitos.</span></li>
+          <li><span class="tool-name">SAP S/4HANA (MM · WM · FICO)</span><span class="tool-use" data-es="Configuración y validación funcional de compras e inventarios, y soporte a la integración con finanzas." data-en="Functional configuration and validation of procurement and inventory, and support for finance integration.">Configuración y validación funcional de compras e inventarios, y soporte a la integración con finanzas.</span></li>
           <li><span class="tool-name">SAP Query e Infosets</span><span class="tool-use" data-es="Reportes a medida dentro de SAP." data-en="Custom reports within SAP.">Reportes a medida dentro de SAP.</span></li>
           <li><span class="tool-name">Debugging ABAP (SE38)</span><span class="tool-use" data-es="Análisis de errores junto al equipo técnico." data-en="Error analysis with the technical team.">Análisis de errores junto al equipo técnico.</span></li>
           <li><span class="tool-name">Creatio CRM</span><span class="tool-use" data-es="Diseño funcional de procesos y automatizaciones sin código." data-en="Functional design of processes and no-code automations.">Diseño funcional de procesos y automatizaciones sin código.</span></li>
@@ -1462,7 +1452,7 @@
 <section id="certificaciones">
   <div class="container">
     <div class="reveal">
-      <div class="section-label" data-es="06 — Formación" data-en="06 — Education">06 — Formación</div>
+      <div class="section-label" data-es="05 — Formación" data-en="05 — Education">05 — Formación</div>
       <h2 class="section-title"><span data-es="Certificaciones y " data-en="Certifications and ">Certificaciones y </span><em data-es="educación" data-en="education">educación</em>.</h2>
       <p class="section-intro" data-es="Formación continua en gestión de producto, metodologías ágiles y SAP, y más recientemente en automatización con inteligencia artificial." data-en="Continuous training in product management, agile methodologies and SAP, and more recently in automation with artificial intelligence.">Formación continua en gestión de producto, metodologías ágiles y SAP, y más recientemente en automatización con inteligencia artificial.</p>
     </div>
@@ -1549,6 +1539,13 @@
         <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4l7 4z"/></svg></div>
         <div>
           <div class="cert-name" data-es="SAP MM S/4HANA — Compras e Inventarios" data-en="SAP MM S/4HANA — Procurement & Inventory">SAP MM S/4HANA — Compras e Inventarios</div>
+          <div class="cert-meta">2025</div>
+        </div>
+      </div>
+      <div class="cert">
+        <div class="cert-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-9l-9-9l2 5l-7 4l7 4z"/></svg></div>
+        <div>
+          <div class="cert-name" data-es="SAP FI — Desde Cero y Completo" data-en="SAP FI — Complete from Scratch">SAP FI — Desde Cero y Completo</div>
           <div class="cert-meta">2025</div>
         </div>
       </div>
